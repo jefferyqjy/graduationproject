@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.sxl.dao.ClassDao">
+	<resultMap id="BaseResultMap" type="com.sxl.model.Classdd">
+		<id column="id" property="id" jdbcType="INTEGER" />
+		<result column="className" property="className" jdbcType="VARCHAR" />
+		<result column="classMan" property="classMan" jdbcType="VARCHAR" />
+		<result column="deptId" property="deptId" jdbcType="INTEGER" />
+	</resultMap>
+	<insert id="insert" parameterType="com.sxl.model.Classdd">
+		insert into t_class (className,classMan,deptId) values
+		(#{className,jdbcType=VARCHAR}, #{classMan,jdbcType=VARCHAR}, #{deptId,jdbcType=INTEGER})
+	</insert>
+	<update id="updateById"
+		parameterType="com.sxl.model.Classdd">
+		update t_class
+			<set>
+			<if test="className != null">
+				className = #{className},
+			</if>
+			<if test="deptId != null">
+				deptId = #{deptId},
+			</if>
+			<if test="classMan != null">
+				classMan = #{classMan},
+			</if>
+			</set>
+			where id =#{id}
+	</update>
+	<select id="selectList" resultMap="BaseResultMap"
+		parameterType="com.sxl.model.Classdd">
+		select * from t_class
+		<where>
+			<if test="className != null">
+			and className like  CONCAT('%',#{className},'%')
+			</if>
+			<if test="id != null">
+			and id =#{id} order by id desc
+			</if>
+		</where>
+	</select>
+	
+	<!-- ********************多表关联查询  开始-->
+	<select id="selectWithDept" resultMap="selectWithDeptResultMap"
+		parameterType="com.sxl.model.Classdd">
+		select * from t_class
+		<where>
+			<if test="className != null">
+			and className like  CONCAT('%',#{className},'%')
+			</if>
+			<if test="id != null">
+			and id =#{id} order by id desc
+			</if>
+		</where>
+	</select>
+	<resultMap type="com.sxl.model.Classdd" id="selectWithDeptResultMap">
+		<id column="id" property="id" jdbcType="INTEGER" />
+		<result column="className" property="className" jdbcType="VARCHAR" />
+		<result column="classMan" property="classMan" jdbcType="VARCHAR" />
+		<result column="deptId" property="deptId" jdbcType="INTEGER" />
+		<association property="dept" column="deptId" select="getDept"/>
+	</resultMap>
+	<select id="getDept" parameterType="int" resultType="com.sxl.model.Dept">
+        SELECT * FROM t_dept WHERE id=#{id}
+    </select>
+    <!-- ********************多表关联查询  结束-->
+    
+    
+	
+	<delete id="deleteById" parameterType="java.lang.Integer">
+		delete from t_class where id = #{id,jdbcType=VARCHAR}
+	</delete>
+	
+	<select id="selectById" resultMap="BaseResultMap"
+		parameterType="java.lang.Integer">
+		select * from t_class where id = #{id}
+	</select>
+</mapper>

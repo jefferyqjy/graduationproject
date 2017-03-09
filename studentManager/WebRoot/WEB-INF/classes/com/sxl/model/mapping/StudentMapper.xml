@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.sxl.dao.StudentDao">
+	<resultMap id="BaseResultMap" type="com.sxl.model.Student">
+		<id column="id" property="id" jdbcType="INTEGER" />
+		<result column="studentName" property="studentName" jdbcType="VARCHAR" />
+		<result column="studentNo" property="studentNo" jdbcType="VARCHAR" />
+		<result column="age" property="age" jdbcType="INTEGER" />
+		<result column="sex" property="sex" jdbcType="VARCHAR" />
+		<result column="address" property="address" jdbcType="VARCHAR" />
+		<result column="mobile" property="mobile" jdbcType="VARCHAR" />
+		<result column="insertDate" property="insertDate" jdbcType="TIMESTAMP" javaType="java.util.Date"/>
+		<result column="classId" property="classId" jdbcType="INTEGER" />
+	</resultMap>
+	<insert id="insert" parameterType="com.sxl.model.Student">
+		insert into t_student (studentName,studentNo,age,sex,address,mobile,insertDate,classId) values
+		(#{studentName,jdbcType=VARCHAR}, #{studentNo,jdbcType=VARCHAR},
+		#{age,jdbcType=INTEGER}, #{sex,jdbcType=VARCHAR},
+		#{address,jdbcType=INTEGER}, #{mobile,jdbcType=CHAR},
+		#{insertDate,jdbcType=TIMESTAMP},#{classId,jdbcType=INTEGER})
+	</insert>
+	<update id="updateById"
+		parameterType="com.sxl.model.Student">
+		update t_student 
+			<set>
+			<if test="studentName != null">
+				studentName = #{studentName},
+			</if>
+			<if test="studentNo != null">
+				studentNo = #{studentNo},
+			</if>
+			<if test="age != null">
+				age = #{age},
+			</if>
+			<if test="sex != null">
+				sex = #{sex},
+			</if>
+			<if test="address != null">
+				address = #{address},
+			</if>
+			<if test="mobile != null">
+				mobile = #{mobile},
+			</if>
+			<if test="classId != null">
+				classId = #{classId},
+			</if>
+			</set>
+			where id =#{id}
+	</update>
+	<select id="selectList" resultMap="BaseResultMap"
+		parameterType="com.sxl.model.Student">
+		select * from t_student
+		<where>
+			<if test="studentName != null">
+			and studentName like  CONCAT('%',#{studentName},'%')
+			</if>
+			<if test="id != null">
+			and id =#{id} order by id desc
+			</if>
+		</where>
+	</select>
+	
+	
+	<!-- ********************多表关联查询  开始-->
+	<select id="selectWithClassdd" resultMap="selectWithClassddResultMap"
+		parameterType="com.sxl.model.Student">
+		select * from t_student
+		<where>
+			<if test="studentName != null">
+			and studentName like  CONCAT('%',#{studentName},'%')
+			</if>
+			<if test="id != null">
+			and id =#{id} order by id desc
+			</if>
+		</where>
+	</select>
+	<resultMap type="com.sxl.model.Student" id="selectWithClassddResultMap">
+		<id column="id" property="id" jdbcType="INTEGER" />
+		<result column="studentName" property="studentName" jdbcType="VARCHAR" />
+		<result column="studentNo" property="studentNo" jdbcType="VARCHAR" />
+		<result column="age" property="age" jdbcType="INTEGER" />
+		<result column="sex" property="sex" jdbcType="VARCHAR" />
+		<result column="address" property="address" jdbcType="VARCHAR" />
+		<result column="mobile" property="mobile" jdbcType="VARCHAR" />
+		<result column="insertDate" property="insertDate" jdbcType="TIMESTAMP" javaType="java.util.Date"/>
+		<result column="classId" property="classId" jdbcType="INTEGER" />
+		<association property="classdd" column="classId" select="getClassdd"/>
+	</resultMap>
+	<select id="getClassdd" parameterType="int" resultType="com.sxl.model.Classdd">
+        SELECT * FROM t_class WHERE id=#{id}
+    </select>
+    <!-- ********************多表关联查询  结束-->
+	
+	
+	
+	<delete id="deleteById" parameterType="java.lang.Integer">
+		delete from t_student where id = #{id,jdbcType=VARCHAR}
+	</delete>
+	
+	
+	
+	<select id="selectById" resultMap="BaseResultMap"
+		parameterType="java.lang.Integer">
+		select * from t_student where id = #{id}
+	</select>
+	<select id="selectByName" resultMap="BaseResultMap"
+		parameterType="java.lang.String">
+		select * from t_student
+		<where>
+			<if test="_parameter != null">
+			and studentName like  CONCAT('%',#{studentName},'%')
+			</if>
+		</where>
+	</select>
+</mapper>

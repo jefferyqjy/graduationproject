@@ -8,12 +8,12 @@
 			<table class="mobile">
 				<tr class="pageheader" height="6%">
 					<td colspan="2">
-						系别管理
+						学院管理
 					</td>
 				</tr>
 				<tr class="pagesearch" height="5%">
 					<td style="text-align: left;">
-						&nbsp;&nbsp; 系别： <input
+						&nbsp;&nbsp; 学院： <input
 					type="text" name="deptName" style="width:100px;">&nbsp;&nbsp;
 						<input type="button" class="btn" value="查 询" onClick="sch();" />
 						&nbsp;&nbsp;

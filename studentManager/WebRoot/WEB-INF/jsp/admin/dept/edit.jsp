@@ -16,12 +16,12 @@
 				<table class="mobile" style="width: 95%;">
 					<tr class="pageheader">
 						<td colspan="2">
-							<strong>系别管理</strong>
+							<strong>学院管理</strong>
 						</td>
 					</tr>
 					<tr height="25">
 						<td class="outDetail" style="width: 30%">
-							系别名称：
+							学院名称：
 							<label style="font-weight: bold; color: red">
 								*
 							</label>
@@ -32,7 +32,7 @@
 					</tr>
 					<tr height="25">
 						<td class="outDetail" style="width: 30%">
-							系指导员：
+							院指导员：
 							<label style="font-weight: bold; color: red">
 								*
 							</label>

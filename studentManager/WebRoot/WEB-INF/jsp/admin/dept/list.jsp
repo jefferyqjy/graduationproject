@@ -13,8 +13,8 @@
 		<display:column style="width: 60px;" media="html" title="编号">
 			<c:out value="${row_rowNum}" />
 		</display:column>
-		<display:column title="系别名称">${row.deptName }</display:column>
-		<display:column title="系指导员">${row.deptMan }</display:column>
+		<display:column title="学院名称">${row.deptName }</display:column>
+		<display:column title="院指导员">${row.deptMan }</display:column>
 		<display:column title="修改" style="width:40px;">
 			<img src="${ctx}/resource/admin/images/pencil.png"
 				onclick="return modifyOne('${row.id}');" style="cursor: hand;" />

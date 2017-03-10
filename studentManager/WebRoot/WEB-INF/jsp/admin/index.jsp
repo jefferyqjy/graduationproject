@@ -49,8 +49,8 @@
 					d.config.stepDepth = 1;
 					d.config.useStatusText = true;
 					d.add(0,-1,' <strong>学生信息管理</strong>');
-					d.add(1,0,'系别管理管理');
-					d.add(11,1,'系别列表','${ctx}/admin/dept/frame.html',"",'page');
+					d.add(1,0,'学院管理');
+					d.add(11,1,'学院列表','${ctx}/admin/dept/frame.html',"",'page');
 					d.add(2,0,'班级管理');
 					d.add(21,2,'班级列表','${ctx}/admin/classdd/frame.html',"",'page');
 					d.add(3,0,'学生管理');

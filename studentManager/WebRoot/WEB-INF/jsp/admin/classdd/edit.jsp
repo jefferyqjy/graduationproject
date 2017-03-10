@@ -43,7 +43,7 @@
 					</tr>
 					<tr height="25">
 						<td class="outDetail" style="width: 30%">
-							系别：
+							学院：
 							<label style="font-weight: bold; color: red">
 								*
 							</label>

@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.sxl.dao.MajorDao">
+	<resultMap id="BaseResultMap" type="com.sxl.model.Major">
+		<id column="id" property="id" jdbcType="INTEGER" />
+		<result column="deptName" property="deptName" jdbcType="VARCHAR" />
+		<result column="deptMan" property="deptMan" jdbcType="VARCHAR" />
+		<result column="deptId" property="deptId" jdbcType="INTEGER" />
+		<result column="majorName" property="majorName" jdbcType="VARCHAR" />
+		<result column="introduce" property="introduce" jdbcType="VARCHAR" />
+		<result column="studentNum" property="studentNum" jdbcType="INTEGER" />
+	</resultMap>
+	<insert id="insert" parameterType="com.sxl.model.Major">
+		insert into t_major (deptId,majorName,introduce,studentNum) values
+		(#{deptId,jdbcType=INTEGER}, #{majorName,jdbcType=VARCHAR},#{introduce,jdbcType=VARCHAR},#{studentNum,jdbcType=INTEGER})
+	</insert>
+	<update id="updateById"
+		parameterType="com.sxl.model.Major">
+		update t_major 
+			<set>
+			<if test="deptId != null">
+				deptId = #{deptId},
+			</if>
+			<if test="majorName != null">
+				majorName = #{majorName},
+			</if>
+			<if test="introduce != null">
+				introduce = #{introduce},
+			</if>
+			<if test="studentNum != null">
+				studentNum = #{studentNum},
+			</if>
+			</set>
+			where id =#{id}
+	</update>
+	<select id="selectList" resultMap="BaseResultMap"
+		parameterType="com.sxl.model.Major">
+		select * from t_major
+		<where>
+			<if test="deptId != null">
+			and deptId = #{deptId}
+			</if>
+			<if test="majorName != null">
+			and majorName like CONCAT('%',#{majorName},'%')
+			</if>
+		</where>
+		 order by id desc
+	</select>
+	
+	<delete id="deleteById" parameterType="java.lang.Integer">
+		delete from t_major where id = #{id,jdbcType=VARCHAR}
+	</delete>
+	
+	<select id="selectById" resultMap="BaseResultMap"
+		parameterType="java.lang.Integer">
+		select * from t_major where id = #{id}
+	</select>
+</mapper>

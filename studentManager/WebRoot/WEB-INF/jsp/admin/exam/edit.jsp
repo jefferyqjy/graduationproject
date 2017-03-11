@@ -13,7 +13,7 @@
 			method="post">
 			<input type="hidden" value="${bean.id }" name="id" id="id" />
 			<center>
-				<table class="mobile" style="width: 95%;">
+				<table class="mobile" style="width: 95%;" border="1" >
 					<tr class="pageheader">
 						<td colspan="2">
 							<strong>学生考试信息管理</strong>

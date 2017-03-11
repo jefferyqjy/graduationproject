@@ -13,7 +13,7 @@
 			method="post">
 			<input type="hidden" value="${bean.id }" name="id" id="id" />
 			<center>
-				<table class="mobile" style="width: 95%;">
+				<table class="mobile" style="width: 95%;" border="1" >
 					<tr class="pageheader">
 						<td colspan="2">
 							<strong>班级管理</strong>
@@ -43,15 +43,15 @@
 					</tr>
 					<tr height="25">
 						<td class="outDetail" style="width: 30%">
-							学院：
+							专业：
 							<label style="font-weight: bold; color: red">
 								*
 							</label>
 						</td>
 						<td class="outDetail2">
-								<select name="deptId">
-									<c:forEach items="${deptList }" var="deptLists">
-										<option value="${deptLists.id }" ${bean.deptId==deptLists.id?'selected':'' }>${deptLists.deptName }</option>
+								<select name="majorId">
+									<c:forEach items="${majorList }" var="majorLists">
+										<option value="${majorLists.id }" ${bean.majorId==majorLists.id?'selected':'' }>${majorLists.majorName }</option>
 									</c:forEach>
 								</select>
 						</td>

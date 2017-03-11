@@ -57,8 +57,16 @@
 					d.add(31,3,'学生列表','${ctx}/admin/student/frame.html',"",'page');
 					d.add(4,0,'考试管理');
 					d.add(41,4,'考试信息列表','${ctx}/admin/exam/frame.html',"",'page');
+					// add major begin
+					d.add(5,0,'专业管理');
+					d.add(51,5,'专业列表','${ctx}/admin/major/frame.html',"",'page');
+					// add major end
 					d.add(6,0,'课程管理');
 					d.add(61,6,'课程列表','${ctx}/admin/kc/frame.html',"",'page');
+					// add grade begin
+					d.add(7,0,'年级管理');
+					d.add(71,7,'年级列表','${ctx}/admin/grade/frame.html',"",'page');
+					// add grade end
 					document.writeln(d);
 					</script>
                 </div></td>

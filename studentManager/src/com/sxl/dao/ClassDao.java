@@ -15,6 +15,6 @@ public interface ClassDao {
     
     Classdd selectById(int id);
     
-    List<Classdd> selectWithDept(Classdd classdd);
+    List<Classdd> selectWithMajor(Classdd classdd);
     
 }

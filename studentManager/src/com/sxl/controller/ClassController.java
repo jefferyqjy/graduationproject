@@ -14,8 +14,8 @@ import org.springframework.web.bind.annotation.ResponseBody;
 
 import com.sxl.MyController;
 import com.sxl.dao.ClassDao;
-import com.sxl.dao.DeptDao;
-import com.sxl.model.Dept;
+import com.sxl.dao.MajorDao;
+import com.sxl.model.Major;
 
 @Controller("adminClassController")
 @RequestMapping("/admin/classdd")
@@ -23,7 +23,7 @@ public class ClassController extends MyController{
 	@Autowired
 	private ClassDao classDao;
 	@Autowired
-	private DeptDao deptDao;
+	private MajorDao majorDao;
 
 	@RequestMapping(value = "/frame")
 	public String index(HttpServletRequest request,HttpServletResponse response, ModelMap model) {
@@ -32,7 +32,7 @@ public class ClassController extends MyController{
 	
 	@RequestMapping(value = "/list")
 	public String list(HttpServletRequest request,HttpServletResponse response, ModelMap model,com.sxl.model.Classdd classdd) {
-		List<com.sxl.model.Classdd> list = classDao.selectWithDept(classdd);
+		List<com.sxl.model.Classdd> list = classDao.selectWithMajor(classdd);
 		model.addAttribute("list", list);
 		return "admin/classdd/list";
 	}
@@ -43,9 +43,9 @@ public class ClassController extends MyController{
 			com.sxl.model.Classdd classdd = classDao.selectById(id);
 			model.addAttribute("bean", classdd);
 		}
-		Dept d = new Dept();
-		List<Dept> deptList = deptDao.selectList(d);
-		model.addAttribute("deptList", deptList);
+		Major d = new Major();
+		List<Major> majorList = majorDao.selectList(d);
+		model.addAttribute("majorList", majorList);
 		
 		return "admin/classdd/edit";
 	}

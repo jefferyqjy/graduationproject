@@ -5,11 +5,11 @@
 		<id column="id" property="id" jdbcType="INTEGER" />
 		<result column="className" property="className" jdbcType="VARCHAR" />
 		<result column="classMan" property="classMan" jdbcType="VARCHAR" />
-		<result column="deptId" property="deptId" jdbcType="INTEGER" />
+		<result column="majorId" property="majorId" jdbcType="INTEGER" />
 	</resultMap>
 	<insert id="insert" parameterType="com.sxl.model.Classdd">
-		insert into t_class (className,classMan,deptId) values
-		(#{className,jdbcType=VARCHAR}, #{classMan,jdbcType=VARCHAR}, #{deptId,jdbcType=INTEGER})
+		insert into t_class (className,classMan,majorId) values
+		(#{className,jdbcType=VARCHAR}, #{classMan,jdbcType=VARCHAR}, #{majorId,jdbcType=INTEGER})
 	</insert>
 	<update id="updateById"
 		parameterType="com.sxl.model.Classdd">
@@ -18,8 +18,8 @@
 			<if test="className != null">
 				className = #{className},
 			</if>
-			<if test="deptId != null">
-				deptId = #{deptId},
+			<if test="majorId != null">
+				majorId = #{majorId},
 			</if>
 			<if test="classMan != null">
 				classMan = #{classMan},
@@ -41,7 +41,7 @@
 	</select>
 	
 	<!-- ********************多表关联查询  开始-->
-	<select id="selectWithDept" resultMap="selectWithDeptResultMap"
+	<select id="selectWithMajor" resultMap="selectWithMajorResultMap"
 		parameterType="com.sxl.model.Classdd">
 		select * from t_class
 		<where>
@@ -53,15 +53,15 @@
 			</if>
 		</where>
 	</select>
-	<resultMap type="com.sxl.model.Classdd" id="selectWithDeptResultMap">
+	<resultMap type="com.sxl.model.Classdd" id="selectWithMajorResultMap">
 		<id column="id" property="id" jdbcType="INTEGER" />
 		<result column="className" property="className" jdbcType="VARCHAR" />
 		<result column="classMan" property="classMan" jdbcType="VARCHAR" />
-		<result column="deptId" property="deptId" jdbcType="INTEGER" />
-		<association property="dept" column="deptId" select="getDept"/>
+		<result column="majorId" property="majorId" jdbcType="INTEGER" />
+		<association property="major" column="majorId" select="getMajor"/>
 	</resultMap>
-	<select id="getDept" parameterType="int" resultType="com.sxl.model.Dept">
-        SELECT * FROM t_dept WHERE id=#{id}
+	<select id="getMajor" parameterType="int" resultType="com.sxl.model.Major">
+        SELECT * FROM t_major WHERE id=#{id}
     </select>
     <!-- ********************多表关联查询  结束-->
     

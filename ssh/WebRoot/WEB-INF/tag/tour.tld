@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE taglib PUBLIC "-//Sun Microsystems, Inc.//DTD JSP Tag Library 1.1//EN" "http://java.sun.com/j2ee/dtds/web-jsptaglibrary_1_1.dtd">
+<taglib>
+	<tlibversion>1.0</tlibversion>
+	<jspversion>1.1</jspversion>
+	<shortname>dtree</shortname>
+	<uri>/tagTest</uri>
+	
+	<tag>
+        <name>leave</name>
+        <tagclass>com.util.Tag</tagclass>
+        <bodycontent>JSP</bodycontent>
+        <attribute>
+            <name>uid</name>
+            <required>true</required>
+            <rtexprvalue>true</rtexprvalue>
+        </attribute>
+    </tag>
+    
+    <tag>
+    	<name>comper</name>
+    	<tagclass>com.util.ComperTag</tagclass>
+    	<bodycontent>JSP</bodycontent>
+    	<attribute>
+    		<name>cid</name>
+    		<required>true</required>
+            <rtexprvalue>true</rtexprvalue>
+    	</attribute>
+    </tag>
+    
+    
+    <tag>
+    	<name>number</name>
+    	<tagclass>com.util.Number</tagclass>
+    	<bodycontent>JSP</bodycontent>
+    	<attribute>
+    		<name>cid</name>
+    		<required>true</required>
+            <rtexprvalue>true</rtexprvalue>
+    	</attribute>
+    </tag>
+    
+    
+    <tag>
+    	<name>liu</name>
+    	<tagclass>com.until.LiuYanTag</tagclass>
+    	<bodycontent>JSP</bodycontent>
+    	<attribute>
+    		<name>uid</name>
+    		<required>true</required>
+            <rtexprvalue>true</rtexprvalue>
+    	</attribute>
+    </tag>
+    <tag>
+    	<name>hufu</name>
+    	<tagclass>com.until.HuFuTag</tagclass>
+    	<bodycontent>JSP</bodycontent>
+    	<attribute>
+    		<name>uid</name>
+    		<required>true</required>
+            <rtexprvalue>true</rtexprvalue>
+    	</attribute>
+    </tag>
+    <tag>
+    	<name>pro</name>
+    	<tagclass>com.until.ProTag</tagclass>
+    	<bodycontent>JSP</bodycontent>
+    	<attribute>
+    		<name>pid</name>
+    		<required>true</required>
+            <rtexprvalue>true</rtexprvalue>
+    	</attribute>
+    </tag>
+</taglib>

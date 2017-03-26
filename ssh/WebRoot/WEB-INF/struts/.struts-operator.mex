@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<FlowViewLayout Version="1.2">
+  <StrutsActivity path="/schoolfellow/index.jsp" location="45,210" dimension="178,48" />
+  <StrutsActivity path="/schoolfellow/geren.jsp" location="650,50" dimension="178,48" />
+  <StrutsTransition id="/index.do,in,/schoolfellow/index.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="137,94" />
+      <AbsolutePoint location="137,210" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/index.do,in,/schoolfellow/geren.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="229,65" />
+      <AbsolutePoint location="650,65" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+</FlowViewLayout>
+

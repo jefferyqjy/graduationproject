@@ -1,0 +1,811 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<FlowViewLayout Version="1.2">
+  <StrutsActivity path="/home.do" location="1250,1450" dimension="202,84" />
+  <StrutsActivity path="/login.do" location="50,150" dimension="280,84" />
+  <StrutsActivity path="/index.do" location="650,350" dimension="184,84" />
+  <StrutsActivity path="/ge.do" location="50,550" dimension="148,84" />
+  <StrutsActivity path="/ph.do" location="650,550" dimension="148,84" />
+  <StrutsActivity path="/gx.do" location="950,550" dimension="64,60" />
+  <StrutsActivity path="/lea.do" location="350,650" dimension="190,84" />
+  <StrutsActivity path="/head.do" location="350,850" dimension="178,84" />
+  <StrutsActivity path="/da.do" location="1250,450" dimension="64,60" />
+  <StrutsActivity path="/fir.do" location="950,950" dimension="70,60" />
+  <StrutsActivity path="/cla.do" location="1550,950" dimension="196,84" />
+  <StrutsActivity path="/depa.do" location="50,1050" dimension="214,84" />
+  <StrutsActivity path="/sch.do" location="1550,650" dimension="190,84" />
+  <StrutsActivity path="/tec.do" location="1850,950" dimension="190,84" />
+  <StrutsActivity path="/find.do" location="1850,1150" dimension="178,84" />
+  <StrutsActivity path="/zc.do" location="2150,1350" dimension="184,84" />
+  <StrutsActivity path="/admin.do" location="50,1550" dimension="82,60" />
+  <StrutsActivity path="/mail.do" location="2750,1550" dimension="76,60" />
+  <StrutsActivity path="/sel_for.jsp" location="1850,1450" dimension="112,48" />
+  <StrutsActivity path="/index.jsp" location="2450,850" dimension="100,48" />
+  <StrutsActivity path="" location="1550,1250" dimension="40,48" />
+  <StrutsActivity path="/sel_new.jsp" location="2450,1450" dimension="112,48" />
+  <StrutsActivity path="/login.jsp" location="950,150" dimension="100,48" />
+  <StrutsActivity path="/admin/main.jsp" location="650,1550" dimension="130,48" />
+  <StrutsActivity path="/schoolfellow/jump.jsp" location="50,350" dimension="172,48" />
+  <StrutsActivity path="/schoolfellow/index.jsp" location="350,350" dimension="178,48" />
+  <StrutsActivity path="/schoolfellow/geren.jsp" location="950,350" dimension="178,48" />
+  <StrutsActivity path="/schoolfellow/addphoto.jsp" location="350,1050" dimension="196,48" />
+  <StrutsActivity path="/schoolfellow/phtot_sel.jsp" location="350,1450" dimension="202,48" />
+  <StrutsActivity path="/ph.html" location="50,850" dimension="88,48" />
+  <StrutsActivity path="/schoolfellow/photo.jsp" location="1250,750" dimension="178,48" />
+  <StrutsActivity path="/ge.html" location="650,750" dimension="88,48" />
+  <StrutsActivity path="/schoolfellow/leave.jsp" location="50,950" dimension="178,48" />
+  <StrutsActivity path="/lea.html" location="650,950" dimension="94,48" />
+  <StrutsActivity path="/schoolfellow/head.jsp" location="650,850" dimension="172,48" />
+  <StrutsActivity path="/schoolfellow/datum.jsp" location="1250,650" dimension="178,48" />
+  <StrutsActivity path="/schoolfellow/fir_phtot_sel.jsp" location="2450,1250" dimension="226,48" />
+  <StrutsActivity path="/schoolfellow/firend.jsp" location="1250,950" dimension="184,48" />
+  <StrutsActivity path="/fir.html" location="2450,950" dimension="94,48" />
+  <StrutsActivity path="/schoolfellow/fir_leave.jsp" location="2450,1050" dimension="202,48" />
+  <StrutsActivity path="/schoolfellow/sel_firend.jsp" location="950,1450" dimension="208,48" />
+  <StrutsActivity path="/schoolfellow/fir_photo.jsp" location="2450,1150" dimension="202,48" />
+  <StrutsActivity path="/schoolfellow/fir_firend.jsp" location="2450,1350" dimension="208,48" />
+  <StrutsActivity path="/schoolfellow/class_addphoto.jsp" location="1850,650" dimension="232,48" />
+  <StrutsActivity path="/schoolfellow/txl.jsp" location="1250,1150" dimension="166,48" />
+  <StrutsActivity path="/schoolfellow/guanli.jsp" location="1850,350" dimension="184,48" />
+  <StrutsActivity path="/cla.html" location="50,1250" dimension="94,48" />
+  <StrutsActivity path="/schoolfellow/class_phtot_sel.jsp" location="650,1450" dimension="238,48" />
+  <StrutsActivity path="/schoolfellow/classes.jsp" location="1550,850" dimension="190,48" />
+  <StrutsActivity path="/schoolfellow/cy.jsp" location="1850,750" dimension="160,48" />
+  <StrutsActivity path="/schoolfellow/class_photo.jsp" location="950,1150" dimension="214,48" />
+  <StrutsActivity path="/schoolfellow/class_leave.jsp" location="350,1150" dimension="214,48" />
+  <StrutsActivity path="/schoolfellow/school_form_leave.jsp" location="2150,850" dimension="250,48" />
+  <StrutsActivity path="/schoolfellow/school_intro.jsp" location="2150,1150" dimension="220,48" />
+  <StrutsActivity path="/schoolfellow/school_jum.jsp" location="2150,1050" dimension="208,48" />
+  <StrutsActivity path="/schoolfellow/school_sel.jsp" location="2150,950" dimension="208,48" />
+  <StrutsActivity path="/schoolfellow/school.jsp" location="350,1350" dimension="184,48" />
+  <StrutsActivity path="/schoolfellow/school_fourm_add.jsp" location="1550,1350" dimension="244,48" />
+  <StrutsActivity path="/schoolfellow/school_forum.jsp" location="650,1350" dimension="220,48" />
+  <StrutsActivity path="/sch.html" location="2150,1250" dimension="94,48" />
+  <StrutsActivity path="/schoolfellow/techer.jsp" location="650,1050" dimension="184,48" />
+  <StrutsActivity path="/schoolfellow/jieguo.jsp" location="50,1350" dimension="184,48" />
+  <StrutsActivity path="/schoolfellow/findgaoji.jsp" location="1850,550" dimension="202,48" />
+  <StrutsActivity path="/schoolfellow/find.jsp" location="650,1250" dimension="172,48" />
+  <StrutsActivity path="/schoolfellow/findstudent.jsp" location="1250,1250" dimension="214,48" />
+  <StrutsActivity path="/schoolfellow/findschool.jsp" location="950,1250" dimension="208,48" />
+  <StrutsActivity path="/schoolfellow/zhuce.jsp" location="1850,1350" dimension="178,48" />
+  <StrutsActivity path="/schoolfellow/zhuce_intro.jsp" location="1550,1250" dimension="214,48" />
+  <StrutsActivity path="/admin/down.jsp" location="650,1650" dimension="130,48" />
+  <StrutsActivity path="/admin.html" location="2750,1050" dimension="106,48" />
+  <StrutsActivity path="/admin/news_up.jsp" location="2750,1150" dimension="148,48" />
+  <StrutsActivity path="/admin/user_list.jsp" location="2750,1350" dimension="160,48" />
+  <StrutsActivity path="/admin/huf_user_list.jsp" location="2750,1450" dimension="184,48" />
+  <StrutsActivity path="/admin/act_list.jsp" location="2750,950" dimension="154,48" />
+  <StrutsActivity path="/admin/top.jsp" location="2450,1550" dimension="124,48" />
+  <StrutsActivity path="/admin/left.jsp" location="2150,1550" dimension="130,48" />
+  <StrutsActivity path="/admin/atc_up.jsp" location="2750,1250" dimension="142,48" />
+  <StrutsActivity path="/admin/new_list.jsp" location="950,1650" dimension="154,48" />
+  <StrutsActivity path="/schoolfellow/mail.jsp" location="1550,1650" dimension="172,48" />
+  <StrutsActivity path="/mail.html" location="1850,1650" dimension="100,48" />
+  <StrutsActivity path="/schoolfellow/mail_j.jsp" location="2450,1650" dimension="184,48" />
+  <StrutsActivity path="/schoolfellow/add_mail.jsp" location="2150,1650" dimension="196,48" />
+  <StrutsActivity path="/schoolfellow/su.jsp" location="2750,850" dimension="160,48" />
+  <StrutsActivity path="/schoolfellow/sel_photo.jsp" location="950,850" dimension="202,48" />
+  <StrutsActivity path="/schoolfellow/" location="950,450" dimension="124,48" />
+  <StrutsActivity path="/index.htm" location="650,150" dimension="100,48" />
+  <StrutsActivity path="/idenx.htm" location="950,50" dimension="100,48" />
+  <StrutsActivity path="/index.html" location="650,250" dimension="106,48" />
+  <StrutsActivity path="index.html" location="950,250" dimension="100,48" />
+  <StrutsActivity path="/schoolfellow/indexjsp" location="50,450" dimension="172,48" />
+  <StrutsActivity path="/" location="350,450" dimension="46,48" />
+  <StrutsActivity path="login.jsp" location="350,550" dimension="94,48" />
+  <StrutsActivity path="ge.html" location="50,750" dimension="82,48" />
+  <StrutsActivity path="/gx.html" location="950,750" dimension="88,48" />
+  <StrutsActivity path="/schoolfellow" location="1250,850" dimension="118,48" />
+  <StrutsActivity path="ph.html" location="1550,550" dimension="82,48" />
+  <StrutsActivity path="/cla.shtml" location="1250,1050" dimension="100,48" />
+  <StrutsActivity path="/schoolfelow/" location="650,1150" dimension="118,48" />
+  <StrutsActivity path="/cla.s" location="1550,1150" dimension="76,48" />
+  <StrutsActivity path="/cla.htl" location="350,1250" dimension="88,48" />
+  <StrutsActivity path="/schoolfellwo/" location="1850,850" dimension="124,48" />
+  <StrutsActivity path="schoolfellow/" location="950,1350" dimension="118,48" />
+  <StrutsActivity path="schoolfellow/school_form_leave.jsp" location="2150,750" dimension="244,48" />
+  <StrutsActivity path="/schoolfellow/school_fourm.jsp" location="1250,1350" dimension="220,48" />
+  <StrutsActivity path="/schoolfellow/photo_sel.jsp" location="50,1450" dimension="202,48" />
+  <StrutsActivity path="/schoolfellow/page.jsp" location="1550,1450" dimension="172,48" />
+  <StrutsActivity path="/admin/" location="350,1550" dimension="82,48" />
+  <StrutsActivity path="/admin." location="950,1550" dimension="82,48" />
+  <StrutsActivity path="/admin/a" location="1550,1550" dimension="88,48" />
+  <StrutsActivity path="/admin/lef.jsp" location="1850,1550" dimension="124,48" />
+  <StrutsActivity path="/admin/.jsp" location="350,1650" dimension="106,48" />
+  <StrutsActivity path="/schoolfellow/mial.jsp" location="1250,1650" dimension="172,48" />
+  <StrutsTransition id="/admin.do,ac,/admin.html,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="50,1580" />
+      <AbsolutePoint location="-256,1580" />
+      <AbsolutePoint location="-256,-643" />
+      <AbsolutePoint location="2721,-643" />
+      <AbsolutePoint location="2721,1074" />
+      <AbsolutePoint location="2750,1074" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/admin.do,d,/admin/down.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="132,1580" />
+      <AbsolutePoint location="202,1580" />
+      <AbsolutePoint location="202,1625" />
+      <AbsolutePoint location="715,1625" />
+      <AbsolutePoint location="715,1650" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/cla.do,ld,/cla.html,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="1670,1034" />
+      <AbsolutePoint location="1670,1241" />
+      <AbsolutePoint location="97,1241" />
+      <AbsolutePoint location="97,1250" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/zc.do,zh,/schoolfellow/zhuce.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="2150,1383" />
+      <AbsolutePoint location="2028,1383" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/sch.do,sl,/schoolfellow/school_form_leave.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="1740,713" />
+      <AbsolutePoint location="2127,713" />
+      <AbsolutePoint location="2127,874" />
+      <AbsolutePoint location="2150,874" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/fir.do,fid,/schoolfellow/fir_phtot_sel.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="950,1001" />
+      <AbsolutePoint location="-106,1001" />
+      <AbsolutePoint location="-106,2255" />
+      <AbsolutePoint location="2661,2255" />
+      <AbsolutePoint location="2661,1298" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/login.do,adm,/admin/main.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="50,192" />
+      <AbsolutePoint location="-181,192" />
+      <AbsolutePoint location="-181,2555" />
+      <AbsolutePoint location="517,2555" />
+      <AbsolutePoint location="517,1574" />
+      <AbsolutePoint location="650,1574" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/cla.do,del,/cla.html,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="1619,1034" />
+      <AbsolutePoint location="1619,1145" />
+      <AbsolutePoint location="53,1145" />
+      <AbsolutePoint location="53,1250" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/fir.do,al,/schoolfellow/firend.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="1020,980" />
+      <AbsolutePoint location="1250,980" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/login.do,error,/login.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="190,150" />
+      <AbsolutePoint location="190,113" />
+      <AbsolutePoint location="1000,113" />
+      <AbsolutePoint location="1000,150" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/login.do,login,/schoolfellow/jump.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="190,234" />
+      <AbsolutePoint location="190,350" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/admin.do,le,/admin/left.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="91,1610" />
+      <AbsolutePoint location="91,2981" />
+      <AbsolutePoint location="1995,2981" />
+      <AbsolutePoint location="1995,1574" />
+      <AbsolutePoint location="2150,1574" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/admin.do,deul,/admin.html,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="52,1610" />
+      <AbsolutePoint location="52,1946" />
+      <AbsolutePoint location="3588,1946" />
+      <AbsolutePoint location="3588,1057" />
+      <AbsolutePoint location="2856,1057" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/mail.do,jum,/schoolfellow/add_mail.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="2771,1610" />
+      <AbsolutePoint location="2771,2102" />
+      <AbsolutePoint location="2248,2102" />
+      <AbsolutePoint location="2248,1698" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/ph.do,ge,/schoolfellow/photo.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="693,634" />
+      <AbsolutePoint location="693,725" />
+      <AbsolutePoint location="1339,725" />
+      <AbsolutePoint location="1339,750" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/home.do,ju,/index.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="1449,1534" />
+      <AbsolutePoint location="1449,2375" />
+      <AbsolutePoint location="3261,2375" />
+      <AbsolutePoint location="3261,874" />
+      <AbsolutePoint location="2550,874" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/zc.do,suc,/login.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="2242,1392" />
+      <AbsolutePoint location="1000,174" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/lea.do,su,/ge.html,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="540,665" />
+      <AbsolutePoint location="664,665" />
+      <AbsolutePoint location="664,750" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/fir.do,suc,/fir.html,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="985,950" />
+      <AbsolutePoint location="985,913" />
+      <AbsolutePoint location="939,913" />
+      <AbsolutePoint location="939,-793" />
+      <AbsolutePoint location="2625,-793" />
+      <AbsolutePoint location="2625,974" />
+      <AbsolutePoint location="2544,974" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/cla.do,su,/cla.html,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="1648,1034" />
+      <AbsolutePoint location="1648,1213" />
+      <AbsolutePoint location="75,1213" />
+      <AbsolutePoint location="75,1250" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/mail.do,se,/schoolfellow/mail_j.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="2826,1580" />
+      <AbsolutePoint location="3768,1580" />
+      <AbsolutePoint location="3768,1674" />
+      <AbsolutePoint location="2634,1674" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/cla.do,cl,/schoolfellow/classes.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="1678,950" />
+      <AbsolutePoint location="1678,898" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/find.do,su,/schoolfellow/findstudent.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="1939,1150" />
+      <AbsolutePoint location="1939,1065" />
+      <AbsolutePoint location="1431,1065" />
+      <AbsolutePoint location="1431,1250" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/depa.do,cl,/schoolfellow/classes.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="264,1113" />
+      <AbsolutePoint location="1479,1113" />
+      <AbsolutePoint location="1479,874" />
+      <AbsolutePoint location="1550,874" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/head.do,ju,/schoolfellow/head.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="528,883" />
+      <AbsolutePoint location="650,883" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/lea.do,al,/schoolfellow/leave.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="350,662" />
+      <AbsolutePoint location="154,662" />
+      <AbsolutePoint location="154,950" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/admin.do,hf,/admin/huf_user_list.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="50,1558" />
+      <AbsolutePoint location="20,1558" />
+      <AbsolutePoint location="20,2813" />
+      <AbsolutePoint location="2842,2813" />
+      <AbsolutePoint location="2842,1498" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/zc.do,in,/schoolfellow/zhuce_intro.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="2150,1413" />
+      <AbsolutePoint location="2097,1413" />
+      <AbsolutePoint location="2097,1274" />
+      <AbsolutePoint location="1764,1274" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/admin.do,un,/admin.html,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="132,1601" />
+      <AbsolutePoint location="2691,1601" />
+      <AbsolutePoint location="2691,1056" />
+      <AbsolutePoint location="2750,1056" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/admin.do,ul,/admin/user_list.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="50,1558" />
+      <AbsolutePoint location="-145,1558" />
+      <AbsolutePoint location="-145,1441" />
+      <AbsolutePoint location="2830,1441" />
+      <AbsolutePoint location="2830,1398" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/ph.do,dl,/ph.html,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="650,613" />
+      <AbsolutePoint location="267,613" />
+      <AbsolutePoint location="267,874" />
+      <AbsolutePoint location="138,874" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/sch.do,sc,/schoolfellow/school.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="1740,674" />
+      <AbsolutePoint location="1761,674" />
+      <AbsolutePoint location="1761,-325" />
+      <AbsolutePoint location="621,-325" />
+      <AbsolutePoint location="621,1374" />
+      <AbsolutePoint location="534,1374" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/home.do,n,/sel_new.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="1250,1483" />
+      <AbsolutePoint location="1179,1483" />
+      <AbsolutePoint location="1179,2645" />
+      <AbsolutePoint location="2097,2645" />
+      <AbsolutePoint location="2097,1474" />
+      <AbsolutePoint location="2450,1474" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/fir.do,ge,/schoolfellow/fir_photo.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="967,1010" />
+      <AbsolutePoint location="967,1131" />
+      <AbsolutePoint location="2551,1131" />
+      <AbsolutePoint location="2551,1150" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/sch.do,ai,/schoolfellow/school_intro.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="1550,683" />
+      <AbsolutePoint location="1509,683" />
+      <AbsolutePoint location="1509,-190" />
+      <AbsolutePoint location="3171,-190" />
+      <AbsolutePoint location="3171,1403" />
+      <AbsolutePoint location="2349,1403" />
+      <AbsolutePoint location="2349,1198" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/fir.do,fi,/schoolfellow/sel_firend.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="950,963" />
+      <AbsolutePoint location="931,963" />
+      <AbsolutePoint location="931,1474" />
+      <AbsolutePoint location="950,1474" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/zc.do,suc,,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="2237,1350" />
+      <AbsolutePoint location="2237,1341" />
+      <AbsolutePoint location="1570,1341" />
+      <AbsolutePoint location="1570,1298" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/sch.do,um,/schoolfellow/school_forum.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="1647,650" />
+      <AbsolutePoint location="1647,-25" />
+      <AbsolutePoint location="849,-25" />
+      <AbsolutePoint location="849,1350" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/login.do,exit,/login.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="330,213" />
+      <AbsolutePoint location="1000,213" />
+      <AbsolutePoint location="1000,198" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/find.do,ju,/schoolfellow/find.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="2028,1213" />
+      <AbsolutePoint location="3678,1213" />
+      <AbsolutePoint location="3678,2735" />
+      <AbsolutePoint location="591,2735" />
+      <AbsolutePoint location="591,1274" />
+      <AbsolutePoint location="650,1274" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/ge.do,ge,/schoolfellow/geren.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="198,583" />
+      <AbsolutePoint location="267,583" />
+      <AbsolutePoint location="267,313" />
+      <AbsolutePoint location="1035,313" />
+      <AbsolutePoint location="1035,350" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/lea.do,suc,/lea.html,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="350,692" />
+      <AbsolutePoint location="297,692" />
+      <AbsolutePoint location="297,974" />
+      <AbsolutePoint location="650,974" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/admin.do,ua,/admin.html,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="50,1602" />
+      <AbsolutePoint location="-56,1602" />
+      <AbsolutePoint location="-56,-880" />
+      <AbsolutePoint location="2925,-880" />
+      <AbsolutePoint location="2925,1074" />
+      <AbsolutePoint location="2856,1074" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/cla.do,all,/schoolfellow/class_leave.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="1729,950" />
+      <AbsolutePoint location="1729,919" />
+      <AbsolutePoint location="2997,919" />
+      <AbsolutePoint location="2997,1319" />
+      <AbsolutePoint location="457,1319" />
+      <AbsolutePoint location="457,1198" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/tec.do,te,/schoolfellow/techer.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="1989,950" />
+      <AbsolutePoint location="1989,813" />
+      <AbsolutePoint location="879,813" />
+      <AbsolutePoint location="879,1074" />
+      <AbsolutePoint location="834,1074" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/admin.do,hufu,/admin.html,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="91,1580" />
+      <AbsolutePoint location="2803,1074" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/sch.do,ft,/schoolfellow/school_fourm_add.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="1729,650" />
+      <AbsolutePoint location="1729,-412" />
+      <AbsolutePoint location="1239,-412" />
+      <AbsolutePoint location="1239,1811" />
+      <AbsolutePoint location="1729,1811" />
+      <AbsolutePoint location="1729,1398" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/admin.do,sn,/admin/news_up.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="50,1558" />
+      <AbsolutePoint location="-296,1558" />
+      <AbsolutePoint location="-296,-715" />
+      <AbsolutePoint location="2659,-715" />
+      <AbsolutePoint location="2659,1174" />
+      <AbsolutePoint location="2750,1174" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/find.do,jg,/schoolfellow/jieguo.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="1850,1183" />
+      <AbsolutePoint location="1828,1183" />
+      <AbsolutePoint location="1828,1413" />
+      <AbsolutePoint location="142,1413" />
+      <AbsolutePoint location="142,1398" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/cla.do,adp,/schoolfellow/class_addphoto.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="1746,962" />
+      <AbsolutePoint location="1798,962" />
+      <AbsolutePoint location="1798,674" />
+      <AbsolutePoint location="1850,674" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/admin.do,nl,/admin/new_list.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="129,1610" />
+      <AbsolutePoint location="129,2033" />
+      <AbsolutePoint location="1027,2033" />
+      <AbsolutePoint location="1027,1698" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/cla.do,ph,/schoolfellow/class_photo.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="1648,950" />
+      <AbsolutePoint location="1648,913" />
+      <AbsolutePoint location="1057,913" />
+      <AbsolutePoint location="1057,1150" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/ph.do,ap,/schoolfellow/addphoto.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="650,583" />
+      <AbsolutePoint location="591,583" />
+      <AbsolutePoint location="591,1074" />
+      <AbsolutePoint location="546,1074" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/cla.do,cy,/schoolfellow/cy.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="1746,992" />
+      <AbsolutePoint location="1828,992" />
+      <AbsolutePoint location="1828,774" />
+      <AbsolutePoint location="1850,774" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/mail.do,dl,/mail.html,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="2758,1610" />
+      <AbsolutePoint location="2758,2315" />
+      <AbsolutePoint location="1900,2315" />
+      <AbsolutePoint location="1900,1698" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/mail.do,lm,/schoolfellow/mail.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="2788,1610" />
+      <AbsolutePoint location="2788,2903" />
+      <AbsolutePoint location="1636,2903" />
+      <AbsolutePoint location="1636,1698" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/fir.do,fal,/schoolfellow/fir_firend.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="967,950" />
+      <AbsolutePoint location="967,937" />
+      <AbsolutePoint location="2385,937" />
+      <AbsolutePoint location="2385,1374" />
+      <AbsolutePoint location="2450,1374" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/home.do,f,/sel_for.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="1351,1534" />
+      <AbsolutePoint location="1351,1631" />
+      <AbsolutePoint location="1759,1631" />
+      <AbsolutePoint location="1759,1474" />
+      <AbsolutePoint location="1850,1474" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/home.do,a,,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="1452,1505" />
+      <AbsolutePoint location="1531,1505" />
+      <AbsolutePoint location="1531,1296" />
+      <AbsolutePoint location="1550,1296" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/ph.do,su,/ph.html,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="753,634" />
+      <AbsolutePoint location="753,813" />
+      <AbsolutePoint location="94,813" />
+      <AbsolutePoint location="94,850" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/cla.do,gl,/schoolfellow/guanli.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="1550,961" />
+      <AbsolutePoint location="1449,961" />
+      <AbsolutePoint location="1449,374" />
+      <AbsolutePoint location="1850,374" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/cla.do,fi,/schoolfellow/class_phtot_sel.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="1550,1031" />
+      <AbsolutePoint location="-16,1031" />
+      <AbsolutePoint location="-16,1513" />
+      <AbsolutePoint location="765,1513" />
+      <AbsolutePoint location="765,1498" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/da.do,sj,/schoolfellow/datum.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="1282,510" />
+      <AbsolutePoint location="1282,650" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/ph.do,fi,/schoolfellow/phtot_sel.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="650,553" />
+      <AbsolutePoint location="489,553" />
+      <AbsolutePoint location="489,413" />
+      <AbsolutePoint location="345,413" />
+      <AbsolutePoint location="345,1474" />
+      <AbsolutePoint location="350,1474" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/gx.do,su,/ge.html,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="982,610" />
+      <AbsolutePoint location="982,695" />
+      <AbsolutePoint location="694,695" />
+      <AbsolutePoint location="694,750" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/fir.do,su,/fir.html,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="1020,958" />
+      <AbsolutePoint location="1202,958" />
+      <AbsolutePoint location="1202,838" />
+      <AbsolutePoint location="2440,838" />
+      <AbsolutePoint location="2440,974" />
+      <AbsolutePoint location="2450,974" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/sch.do,adt,/sch.html,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="1550,725" />
+      <AbsolutePoint location="1479,725" />
+      <AbsolutePoint location="1479,-265" />
+      <AbsolutePoint location="3429,-265" />
+      <AbsolutePoint location="3429,2171" />
+      <AbsolutePoint location="2127,2171" />
+      <AbsolutePoint location="2127,1274" />
+      <AbsolutePoint location="2150,1274" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/find.do,gj,/schoolfellow/findgaoji.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="2028,1183" />
+      <AbsolutePoint location="2097,1183" />
+      <AbsolutePoint location="2097,574" />
+      <AbsolutePoint location="2052,574" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/fir.do,lal,/schoolfellow/fir_leave.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="985,1010" />
+      <AbsolutePoint location="985,1074" />
+      <AbsolutePoint location="1179,1074" />
+      <AbsolutePoint location="1179,-502" />
+      <AbsolutePoint location="2565,-502" />
+      <AbsolutePoint location="2565,1050" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/admin.do,an,/admin.html,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="69,1610" />
+      <AbsolutePoint location="69,1096" />
+      <AbsolutePoint location="2750,1096" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/find.do,sc,/schoolfellow/findschool.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="2028,1153" />
+      <AbsolutePoint location="2055,1153" />
+      <AbsolutePoint location="2055,1733" />
+      <AbsolutePoint location="1203,1733" />
+      <AbsolutePoint location="1203,1274" />
+      <AbsolutePoint location="1158,1274" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/index.do,error,/login.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="771,350" />
+      <AbsolutePoint location="771,174" />
+      <AbsolutePoint location="950,174" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/index.do,in,/schoolfellow/index.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="650,383" />
+      <AbsolutePoint location="528,383" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/sch.do,ju,/schoolfellow/school_jum.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="1699,650" />
+      <AbsolutePoint location="1699,485" />
+      <AbsolutePoint location="3339,485" />
+      <AbsolutePoint location="3339,1019" />
+      <AbsolutePoint location="2254,1019" />
+      <AbsolutePoint location="2254,1050" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/mail.do,ero,/schoolfellow/su.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="2788,1580" />
+      <AbsolutePoint location="0,0" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/admin.do,t,/admin/top.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="61,1610" />
+      <AbsolutePoint location="61,1598" />
+      <AbsolutePoint location="2512,1598" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/admin.do,dn,/admin.html,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="91,1550" />
+      <AbsolutePoint location="91,1541" />
+      <AbsolutePoint location="3507,1541" />
+      <AbsolutePoint location="3507,1137" />
+      <AbsolutePoint location="2803,1137" />
+      <AbsolutePoint location="2803,1098" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/cla.do,tx,/schoolfellow/txl.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="1550,983" />
+      <AbsolutePoint location="1509,983" />
+      <AbsolutePoint location="1509,1174" />
+      <AbsolutePoint location="1416,1174" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/admin.do,sa,/admin/atc_up.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="113,1610" />
+      <AbsolutePoint location="113,1861" />
+      <AbsolutePoint location="3089,1861" />
+      <AbsolutePoint location="3089,1274" />
+      <AbsolutePoint location="2892,1274" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/sch.do,ff,/schoolfellow/school_sel.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="1677,650" />
+      <AbsolutePoint location="1677,-100" />
+      <AbsolutePoint location="2415,-100" />
+      <AbsolutePoint location="2415,974" />
+      <AbsolutePoint location="2358,974" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/ge.do,error,/login.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="124,550" />
+      <AbsolutePoint location="124,513" />
+      <AbsolutePoint location="1203,513" />
+      <AbsolutePoint location="1203,174" />
+      <AbsolutePoint location="1050,174" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/admin.do,da,/admin.html,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="132,1558" />
+      <AbsolutePoint location="238,1558" />
+      <AbsolutePoint location="238,2499" />
+      <AbsolutePoint location="2727,2499" />
+      <AbsolutePoint location="2727,1096" />
+      <AbsolutePoint location="2750,1096" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/admin.do,al,/admin/act_list.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="132,1605" />
+      <AbsolutePoint location="132,974" />
+      <AbsolutePoint location="2904,974" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+</FlowViewLayout>
+

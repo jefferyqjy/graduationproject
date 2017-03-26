@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE beans PUBLIC "-//SPRING//DTD BEAN//EN" "http://www.springframework.org/dtd/spring-beans.dtd">
+
+<beans>
+	<bean id="firend" parent="baseTxProxy">
+		<property name="target">
+			<bean 	class="com.service.impl.FirendImple">
+				<property name="dao"><ref bean="fdaos"/></property>
+			</bean>
+		</property>
+	</bean>
+	<bean id="fdaos" class="com.dao.FirendDao">
+		<property name="sessionFactory"><ref bean="sessionFactory"></ref></property>
+	</bean>
+	
+	<bean id="photo" parent="baseTxProxy">
+		<property name="target">
+			<bean 	class="com.service.impl.GphotoImple">
+				<property name="dao"><ref bean="pdaos"/></property>
+			</bean>
+		</property>
+	</bean>
+	<bean id="pdaos" class="com.dao.GphotoDao">
+		<property name="sessionFactory"><ref bean="sessionFactory"></ref></property>
+	</bean>
+	
+	<bean id="intro" parent="baseTxProxy">
+		<property name="target">
+			<bean 	class="com.service.impl.IntroImple">
+				<property name="dao"><ref bean="idaos"/></property>
+			</bean>
+		</property>
+	</bean>
+	<bean id="idaos" class="com.dao.IntroDao">
+		<property name="sessionFactory"><ref bean="sessionFactory"></ref></property>
+	</bean>
+	
+	<bean id="leave" parent="baseTxProxy">
+		<property name="target">
+			<bean 	class="com.service.impl.LeaveImple">
+				<property name="dao"><ref bean="ldaos"/></property>
+			</bean>
+		</property>
+	</bean>
+	<bean id="ldaos" class="com.dao.LeaveDao">
+		<property name="sessionFactory"><ref bean="sessionFactory"></ref></property>
+	</bean>
+	
+	<bean id="uassn" parent="baseTxProxy">
+		<property name="target">
+			<bean 	class="com.service.impl.UassnImple">
+				<property name="dao"><ref bean="udaos"/></property>
+			</bean>
+		</property>
+	</bean>
+	<bean id="udaos" class="com.dao.UassnDao">
+		<property name="sessionFactory"><ref bean="sessionFactory"></ref></property>
+	</bean>
+	
+	<bean id="user" parent="baseTxProxy">
+		<property name="target">
+			<bean 	class="com.service.impl.UserImple">
+				<property name="dao"><ref bean="usdaos"/></property>
+			</bean>
+		</property>
+	</bean>
+	<bean id="usdaos" class="com.dao.UserDao">
+		<property name="sessionFactory"><ref bean="sessionFactory"></ref></property>
+	</bean>
+	
+	<bean id="techer" parent="baseTxProxy">
+		<property name="target">
+			<bean 	class="com.service.impl.TeacherImple">
+				<property name="dao"><ref bean="tecdao"/></property>
+			</bean>
+		</property>
+	</bean>
+	<bean id="tecdao" class="com.dao.TeacherDao">
+		<property name="sessionFactory"><ref bean="sessionFactory"></ref></property>
+	</bean>
+	
+	<bean id="school" parent="baseTxProxy">
+		<property name="target">
+			<bean 	class="com.service.impl.SchoolImple">
+				<property name="dao"><ref bean="schooldao"/></property>
+			</bean>
+		</property>
+	</bean>
+	<bean id="schooldao" class="com.dao.SchoolDao">
+		<property name="sessionFactory"><ref bean="sessionFactory"></ref></property>
+	</bean>
+	
+	<bean id="depart" parent="baseTxProxy">
+		<property name="target">
+			<bean 	class="com.service.impl.DepartmentImple">
+				<property name="dao"><ref bean="departdao"/></property>
+			</bean>
+		</property>
+	</bean>
+	<bean id="departdao" class="com.dao.DepartmentDao">
+		<property name="sessionFactory"><ref bean="sessionFactory"></ref></property>
+	</bean>
+	
+	<bean id="classes" parent="baseTxProxy">
+		<property name="target">
+			<bean 	class="com.service.impl.ClassesImple">
+				<property name="dao"><ref bean="clasdao"/></property>
+			</bean>
+		</property>
+	</bean>
+	<bean id="clasdao" class="com.dao.ClassesDao">
+		<property name="sessionFactory"><ref bean="sessionFactory"></ref></property>
+	</bean>
+	
+	<bean id="news" parent="baseTxProxy">
+		<property name="target">
+			<bean 	class="com.service.impl.NewsImple">
+				<property name="dao"><ref bean="newdao"/></property>
+			</bean>
+		</property>
+	</bean>
+	<bean id="newdao" class="com.dao.NewsDao">
+		<property name="sessionFactory"><ref bean="sessionFactory"></ref></property>
+	</bean>
+	
+	<bean id="mail" parent="baseTxProxy">
+		<property name="target">
+			<bean 	class="com.service.impl.MailImple">
+				<property name="dao"><ref bean="maildao"/></property>
+			</bean>
+		</property>
+	</bean>
+	<bean id="maildao" class="com.dao.MailDao">
+		<property name="sessionFactory"><ref bean="sessionFactory"></ref></property>
+	</bean>
+</beans>

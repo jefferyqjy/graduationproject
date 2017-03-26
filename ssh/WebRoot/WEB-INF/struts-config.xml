@@ -1,0 +1,203 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts-config PUBLIC "-//Apache Software Foundation//DTD Struts Configuration 1.2//EN" "http://struts.apache.org/dtds/struts-config_1_2.dtd">
+
+<struts-config>
+  <data-sources />
+  <form-beans >
+  	
+  </form-beans>
+  <global-exceptions />
+  <global-forwards />
+  <action-mappings >
+  	<action
+  		parameter="ssh"
+  		path="/home"
+  		type="com.actions.HomePageAction">
+  		<forward name="ju" path="/index.jsp"/>
+  		<forward name="f" path="/sel_for.jsp"/>
+  		<forward name="n" path="/sel_new.jsp"/>
+  		<forward name="a" path=""/>
+  	</action>
+    <action
+      parameter="method"
+      path="/login"
+      type="com.actions.LoginAction">
+      <forward name="login" path="/schoolfellow/jump.jsp"></forward>
+      <forward name="exit" path="/login.jsp"></forward>
+      <forward name="error" path="/login.jsp"></forward>
+      <forward name="adm" path="/admin/main.jsp"/> 
+    </action>
+    
+   <action
+  	path="/index"
+  	parameter="ssh"
+  	type="com.actions.IndexAction">
+  	<forward name="in" path="/schoolfellow/index.jsp"/>
+  	<forward name="error" path="/login.jsp"/>
+  </action>
+  <action
+  	path="/ge"
+  	parameter="ssh"
+  	type="com.actions.Geren">
+  	<forward name="ge" path="/schoolfellow/geren.jsp"/>
+  	<forward name="error" path="/login.jsp"/>
+  </action>
+  
+  <action
+  	path="/ph"
+  	parameter="ssh"
+  	type="com.actions.GPhotoAction">
+  	<forward name="ge" path="/schoolfellow/photo.jsp"/>
+  	<forward name="dl" path="/ph.html?ssh=all"/>
+  	<forward name="ap" path="/schoolfellow/addphoto.jsp"/>
+  	<forward name="su" path="/ph.html?ssh=all"/>
+  	<forward name="fi" path="/schoolfellow/phtot_sel.jsp"/>
+  </action>
+  
+  <action
+  	path="/gx"
+  	type="com.actions.GexingAction">
+  	<forward name="su" path="/ge.html"/>
+  </action>
+  
+  <action
+  	path="/lea"
+  	parameter="ssh"
+  	type="com.actions.LeaveAction">
+  	<forward name="su" path="/ge.html"/>
+  	<forward name="al" path="/schoolfellow/leave.jsp"/>
+  	<forward name="suc" path="/lea.html?ssh=all"/>
+  </action>
+  
+  <action
+  	path="/head"
+  	parameter="ssh"
+  	type="com.actions.HeadAction">
+  	<forward name="ju" path="/schoolfellow/head.jsp"/>
+  </action>
+  
+  <action
+  	path="/da"
+  	parameter="ssh"
+  	type="com.actions.DatumAction">
+  	<forward name="sj" path="/schoolfellow/datum.jsp"/>
+  </action>
+  
+  <action
+  	path="/fir"
+  	parameter="ssh"
+  	type="com.actions.FirendAction">
+  	<forward name="al" path="/schoolfellow/firend.jsp"/>
+  	<forward name="fal" path="/schoolfellow/fir_firend.jsp"/>
+  	<forward name="fi" path="/schoolfellow/sel_firend.jsp"/>
+  	<forward name="su" path="/fir.html?ssh=find"/>
+  	<forward name="lal" path="/schoolfellow/fir_leave.jsp"/>
+  	<forward name="suc" path="/fir.html?ssh=leaall"/>
+  	<forward name="ge" path="/schoolfellow/fir_photo.jsp"/>
+  	<forward name="fid" path="/schoolfellow/fir_phtot_sel.jsp"/>
+  </action>
+  
+  <action
+  	path="/cla"
+  	parameter="ssh"
+  	type="com.actions.ClassesAction">
+  	<forward name="cl" path="/schoolfellow/classes.jsp"/>
+  	<forward name="su" path="/cla.html?ssh=find"/>
+  	<forward name="all" path="/schoolfellow/class_leave.jsp"/>
+  	<forward name="ph" path="/schoolfellow/class_photo.jsp"/>
+  	<forward name="tx" path="/schoolfellow/txl.jsp"/>
+  	<forward name="ld" path="/cla.html?ssh=leavall"/>
+  	<forward name="del" path="/cla.html?ssh=photoall"/>
+  	<forward name="adp" path="/schoolfellow/class_addphoto.jsp"/>
+  	<forward name="cy" path="/schoolfellow/cy.jsp"/>
+  	<forward name="gl" path="/schoolfellow/guanli.jsp"/>
+  	<forward name="fi" path="/schoolfellow/class_phtot_sel.jsp"/>
+  </action>
+  
+  <action
+  	path="/depa"
+  	parameter="ssh"
+  	type="com.actions.DepartmentAction">
+  	<forward name="cl" path="/schoolfellow/classes.jsp"/>
+  </action>
+  
+  <action
+  	path="/sch"
+  	parameter="ssh"
+  	type="com.actions.SchoolAction">
+  	<forward name="sc" path="/schoolfellow/school.jsp"/>
+  	<forward name="um" path="/schoolfellow/school_forum.jsp"/>
+  	<forward name="ff" path="/schoolfellow/school_sel.jsp"/>
+  	<forward name="ju" path="/schoolfellow/school_jum.jsp"/>
+  	<forward name="sl" path="/schoolfellow/school_form_leave.jsp"/>
+  	<forward name="ai" path="/schoolfellow/school_intro.jsp"/>
+  	<forward name="ft" path="/schoolfellow/school_fourm_add.jsp"/>
+  	<forward name="adt" path="/sch.html?ssh=forum"/>
+  </action>
+  
+  <action
+  	path="/tec"
+  	parameter="ssh"
+  	type="com.actions.TecherAction">
+  	<forward name="te" path="/schoolfellow/techer.jsp"/>
+  </action>
+  
+  <action
+  	path="/find"
+  	parameter="ssh"
+  	type="com.actions.FindAction">
+  	<forward name="ju" path="/schoolfellow/find.jsp"/>
+  	<forward name="gj" path="/schoolfellow/findgaoji.jsp"/>
+  	<forward name="su" path="/schoolfellow/findstudent.jsp"/>
+  	<forward name="sc" path="/schoolfellow/findschool.jsp"/>
+  	<forward name="jg" path="/schoolfellow/jieguo.jsp"/>
+  </action>
+  
+  <action
+  	path="/zc"
+  	parameter="ssh"
+  	type="com.actions.ZhuceAction">
+  	<forward name="zh" path="/schoolfellow/zhuce.jsp"/>
+  	<forward name="in" path="/schoolfellow/zhuce_intro.jsp"/>
+  	<forward name="suc" path="/login.jsp"/>
+  </action>
+  
+  <action
+  	path="/admin"
+  	parameter="ssh"
+  	type="com.actions.AdministerAction">
+  	<forward name="le" path="/admin/left.jsp"/>
+  	<forward name="t" path="/admin/top.jsp"/>
+  	<forward name="d" path="/admin/down.jsp"/>
+  	<forward name="nl" path="/admin/new_list.jsp"/>
+  	<forward name="al" path="/admin/act_list.jsp"/>
+  	<forward name="an" path="/admin.html?ssh=newlist"/>
+  	<forward name="ac" path="/admin.html?ssh=atclist"/>
+  	<forward name="da" path="/admin.html?ssh=atclist"/>
+  	<forward name="dn" path="/admin.html?ssh=newlist"/>
+  	<forward name="un" path="/admin.html?ssh=newlist"/>
+  	<forward name="ua" path="/admin.html?ssh=atclist"/>
+  	<forward name="sn" path="/admin/news_up.jsp"/>
+  	<forward name="sa" path="/admin/atc_up.jsp"/>
+  	
+  	<forward name="ul" path="/admin/user_list.jsp"/>
+  	<forward name="deul" path="/admin.html?ssh=alluser"/>
+  	<forward name="hf" path="/admin/huf_user_list.jsp"/>
+  	<forward name="hufu" path="/admin.html?ssh=huf"/>
+  </action>
+  
+  <action
+  	path="/mail"
+  	parameter="ssh"
+  	type="com.actions.MailAction">
+  	<forward name="lm" path="/schoolfellow/mail.jsp"/>
+  	<forward name="dl" path="/mail.html?ssh=li"/>
+  	<forward name="jum" path="/schoolfellow/add_mail.jsp"/>
+  	<forward name="ero" path="/schoolfellow/su.jsp"/>
+  	<forward name="se" path="/schoolfellow/mail_j.jsp"/>
+  	</action>
+  </action-mappings>
+
+  <message-resources parameter="ApplicationResources" />
+</struts-config>
+

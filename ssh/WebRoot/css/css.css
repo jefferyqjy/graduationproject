@@ -1,0 +1,6 @@
+.ssh{ width:540px; height:auto; float:left; background:#ffffff; margin:10px 0 0 10px!important;  margin:10px 0 0 5px;}
+.ssh1{ width:510px; height:32px; float:left; line-height:32px; font-size:14px; color:#cc0000; font-weight:bold; margin: 10px 0 0 10px!important; margin:10px 0 0 5px; background:#eeeeee; padding:0 0 0 10px;}
+.ssh2 { width:530px; height:300px; float:left;}
+.ssh2 dl{ width:110px; height:auto; float:left; background:#ffffff; margin:10px 0 0 20px!important; +margin:10px 0 0 20px!important; margin:10px 0 0 15px;}
+.ssh2 dl dt{ width:110px; height:82px; float:left; background:#eeeeee; text-align:center; padding:4px 0 0 0;}
+.ssh2 dl dd{ width:110px; height:25px; line-height:20px; float:left; background:#eeeeee; margin:10px 0 0 0; font-size:12px;}

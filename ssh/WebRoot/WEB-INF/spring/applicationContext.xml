@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE beans PUBLIC "-//SPRING//DTD BEAN//EN" "http://www.springframework.org/dtd/spring-beans.dtd">
+
+<beans>
+	<bean id="dataSource"
+		class="org.apache.commons.dbcp.BasicDataSource">
+		<property name="driverClassName">
+			<value>com.mysql.jdbc.Driver</value>
+		</property>
+		<property name="url">
+			<value>jdbc:mysql://localhost:3306/ssh</value>
+		</property>
+		<property name="username">
+			<value>root</value>
+		</property>
+		<property name="password">
+			<value>root</value>
+		</property>
+	</bean>
+	<bean id="sessionFactory"
+		class="org.springframework.orm.hibernate3.LocalSessionFactoryBean">
+		<property name="dataSource">
+			<ref bean="dataSource" />
+		</property>
+		<property name="mappingResources">
+			<list>
+				<value>com/hibernate/Firend.hbm.xml</value>
+				<value>com/hibernate/GPhoto.hbm.xml</value>
+				<value>com/hibernate/Intro.hbm.xml</value>
+				<value>com/hibernate/UAssn.hbm.xml</value>
+				<value>com/hibernate/Users.hbm.xml</value>
+				<value>com/hibernate/GeLeave.hbm.xml</value>
+				<value>com/hibernate/AssForumLeave.hbm.xml</value>
+				<value>com/hibernate/Assn.hbm.xml</value>
+				<value>com/hibernate/AssnForum.hbm.xml</value>
+				<value>com/hibernate/Classes.hbm.xml</value>
+				<value>com/hibernate/ClassLeave.hbm.xml</value>
+				<value>com/hibernate/ClassPhoto.hbm.xml</value>
+				<value>com/hibernate/Department.hbm.xml</value>
+				<value>com/hibernate/School.hbm.xml</value>
+				<value>com/hibernate/SchoolForum.hbm.xml</value>
+				<value>com/hibernate/SchoolLeave.hbm.xml</value>
+				<value>com/hibernate/Techer.hbm.xml</value>
+				<value>com/hibernate/News.hbm.xml</value>
+				<value>com/hibernate/Mails.hbm.xml</value>
+			</list>
+			             
+		</property>
+			
+		<property name="hibernateProperties">
+			<props>
+				<prop key="hibernate.dialect">
+					org.hibernate.dialect.MySQLDialect
+				</prop>
+				<prop key="hibernate.show_sql">
+					true
+				</prop>
+			</props>
+		</property>
+	</bean>
+	
+	<bean id="transactionManager" class="org.springframework.orm.hibernate3.HibernateTransactionManager">
+		<property name="sessionFactory">
+			<ref bean="sessionFactory" />
+		</property>
+	</bean>
+	<bean id="baseTxProxy" lazy-init="true" class="org.springframework.transaction.interceptor.TransactionProxyFactoryBean">
+		<property name="transactionManager">
+			<ref local="transactionManager" />
+		</property>
+		<property name="transactionAttributes">
+			<props>
+				<prop key="*">PROPAGATION_REQUIRED,readOnly</prop>
+				<prop key="save*">PROPAGATION_REQUIRED,-Exception</prop>
+				<prop key="delete*">PROPAGATION_REQUIRED,-Exception</prop>
+				<prop key="update*">PROPAGATION_REQUIRED,-Exception</prop>
+				<prop key="init*">PROPAGATION_REQUIRED,-Exception</prop>
+			</props>
+		</property>
+	</bean>
+	<!-- 
+	<bean id="MyselfService" parent="baseTxProxy">
+		<property name="target">
+			<bean class="com.boco.cs.myselfservice.service.impl.MyselfServiceImpl">
+				<property name="objectDao">
+					<ref bean="objectDao" />
+				</property>
+			</bean>
+		</property>
+	</bean>-->
+	
+	</beans>

@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" 
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+	<class name="com.entity.TopicEntity" table="topic" catalog="lvyou">
+		<id name="topicid" type="java.lang.String">
+			<column name="topicid" length="255" />
+			<generator class="uuid.hex"></generator>
+		</id>
+		<property name="usersid" type="java.lang.String">
+			<column name="usersid" />
+		</property>
+		<property name="linesid" type="java.lang.String">
+			<column name="linesid" />
+		</property>
+		<property name="contents" type="java.lang.String">
+			<column name="contents" />
+		</property>
+		<property name="addtime" type="java.lang.String">
+			<column name="addtime" />
+		</property>
+		<set name="retopic" lazy="false" inverse="true" cascade="all">
+			<key>
+				<column name="topicid" length="50" not-null="true" />
+			</key>
+			<one-to-many class="com.entity.RetopicEntity" />
+		</set>
+		<many-to-one name="lines" column="linesid" class="com.entity.LinesEntity"
+			fetch="join" insert="false" update="false" lazy="false" />
+		<many-to-one name="users" column="usersid" class="com.entity.UsersEntity"
+			fetch="join" insert="false" update="false" lazy="false" />
+	</class>
+</hibernate-mapping>

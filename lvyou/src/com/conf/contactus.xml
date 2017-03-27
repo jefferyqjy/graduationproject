@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE struts PUBLIC 
+"-//Apache Software Foundation//DTD Struts Configuration 2.1//EN" 
+"http://struts.apache.org/dtds/struts-2.1.dtd">
+<struts>
+	<package name="contactus" namespace="/contactus" extends="default">
+		<action name="createContactus" class="contactusAction" method="createContactus">
+			<result name="success">/admin/addcontactus.jsp</result>
+		</action>
+		<action name="addContactus" class="contactusAction" method="addContactus">
+			<result name="success" type="chain">createContactus</result>
+		</action>
+		<action name="updateContactus" class="contactusAction" method="updateContactus">
+			<result name="success" type="chain">getAllContactus</result>
+		</action>
+		<action name="deleteContactus" class="contactusAction" method="deleteContactus">
+			<result name="success" type="chain">getAllContactus</result>
+			<result name="fail" type="chain">getAllContactus</result>
+		</action>
+		<action name="getAllContactus" class="contactusAction" method="getAllContactus">
+			<result name="success">/admin/listcontactus.jsp</result>
+		</action>
+		<action name="getContactusById" class="contactusAction" method="getContactusById">
+			<result name="success">/admin/editcontactus.jsp</result>
+		</action>
+		<action name="queryContactusByCond" class="contactusAction"
+			method="queryContactusByCond">
+			<result name="success">/admin/querycontactus.jsp</result>
+		</action>
+	</package>
+</struts>

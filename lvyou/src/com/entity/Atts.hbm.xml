@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" 
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+	<class name="com.entity.AttsEntity" table="atts" catalog="lvyou">
+		<id name="attsid" type="java.lang.String">
+			<column name="attsid" length="255" />
+			<generator class="uuid.hex"></generator>
+		</id>
+		<property name="name" type="java.lang.String">
+			<column name="name" />
+		</property>
+		<property name="image" type="java.lang.String">
+			<column name="image" />
+		</property>
+		<property name="intro" type="java.lang.String">
+			<column name="intro" />
+		</property>
+		<property name="hits" type="java.lang.String">
+			<column name="hits" />
+		</property>
+	</class>
+</hibernate-mapping>

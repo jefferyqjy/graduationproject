@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="UTF-8" ?><!DOCTYPE struts PUBLIC "-//Apache Software Foundation//DTD Struts Configuration 2.1//EN" "http://struts.apache.org/dtds/struts-2.1.dtd">
+<struts>
+	<package name="index" namespace="/index" extends="default">
+		<action name="index" class="indexAction" method="index">
+			<result>/default.jsp</result>
+		</action>
+		<action name="exit" class="indexAction" method="exit">
+			<result type="chain">index</result>
+		</action>
+		<action name="addtopic" class="indexAction" method="addtopic">
+			<result type="redirect">/index/detail.action?name=${topic.linesid}
+			</result>
+		</action>
+		<action name="adminLogin" class="indexAction" method="adminLogin">
+			<result name="success">/admin/main.jsp</result>
+			<result name="fail">/admin/index.jsp</result>
+		</action>
+
+		<action name="preLogin" class="indexAction" method="preLogin">
+			<result>/login.jsp</result>
+		</action>
+		<action name="prePwd" class="indexAction" method="prePwd">
+			<result name="fail" type="chain">preLogin</result>
+			<result>/editpwd.jsp</result>
+		</action>
+		<action name="preReg" class="indexAction" method="preReg">
+			<result>/reg.jsp</result>
+		</action>
+		<action name="login" class="indexAction" method="login">
+			<result name="fail" type="chain">preLogin</result>
+			<result name="admin">/admin/main.jsp</result>
+			<result name="user" type="chain">index</result>
+		</action>
+		<action name="reg" class="indexAction" method="reg">
+			<result type="chain">preLogin</result>
+		</action>
+		<action name="editPwd" class="indexAction" method="editPwd">
+			<result type="chain">prePwd</result>
+			<result name="fail" type="chain">preLogin</result>
+		</action>
+		<action name="userCenter" class="indexAction" method="userCenter">
+			<result>/userinfo.jsp</result>
+			<result name="fail">/login.jsp</result>
+		</action>
+
+
+
+
+		<action name="article" class="indexAction" method="article">
+			<result>/article.jsp</result>
+		</action>
+		<action name="read" class="indexAction" method="read">
+			<result>/read.jsp</result>
+		</action>
+		<action name="aboutus" class="indexAction" method="aboutus">
+			<result>/about.jsp</result>
+		</action>
+		<action name="contactus" class="indexAction" method="contactus">
+			<result>/contact.jsp</result>
+		</action>
+
+
+		<!-- 商品  -->
+		<action name="special" class="indexAction" method="special">
+			<result>/special.jsp</result>
+		</action>
+		<action name="recommend" class="indexAction" method="recommend">
+			<result>/recommend.jsp</result>
+		</action>
+		<action name="cate" class="indexAction" method="cate">
+			<result>/cate.jsp</result>
+		</action>
+		<action name="query" class="indexAction" method="query">
+			<result>/query.jsp</result>
+		</action>
+		<action name="lines" class="indexAction" method="lines">
+			<result>/lines.jsp</result>
+		</action>
+		<action name="detail" class="indexAction" method="detail">
+			<result>/detail.jsp</result>
+		</action>
+
+
+
+		<action name="atts" class="indexAction" method="atts">
+			<result>/atts.jsp</result>
+		</action>
+		<action name="attsDetail" class="indexAction" method="attsDetail">
+			<result>/attsdetail.jsp</result>
+		</action>
+
+
+		<!-- 购物车 -->
+		<action name="addCart" class="indexAction" method="addCart">
+			<result type="chain">showCart</result>
+			<result name="fail" type="chain">preLogin</result>
+		</action>
+		<action name="showCart" class="indexAction" method="showCart">
+			<result name="fail" type="chain">preLogin</result>
+			<result>/cart.jsp</result>
+		</action>
+		<action name="deleteCart" class="indexAction" method="deleteCart">
+			<result name="fail" type="chain">preLogin</result>
+			<result type="chain">showCart</result>
+		</action>
+		<!-- 订单 -->
+
+		<action name="preCheckout" class="indexAction" method="preCheckout">
+			<result>/checkout.jsp</result>
+		</action>
+		<action name="checkOut" class="indexAction" method="checkOut">
+			<result name="success" type="chain">showOrders</result>
+			<result name="fail" type="chain">preLogin</result>
+		</action>
+		<action name="showOrders" class="indexAction" method="showOrders">
+			<result name="success">/history.jsp</result>
+			<result name="fail" type="chain">preLogin</result>
+		</action>
+		<action name="orderdetail" class="indexAction" method="orderdetail">
+			<result>/orderdetail.jsp</result>
+		</action>
+
+
+	</package>
+</struts> 

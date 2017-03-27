@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE struts PUBLIC 
+"-//Apache Software Foundation//DTD Struts Configuration 2.1//EN" 
+"http://struts.apache.org/dtds/struts-2.1.dtd">
+<struts>
+	<package name="cart" namespace="/cart" extends="default">
+		<action name="createCart" class="cartAction" method="createCart">
+			<result name="success">/addcart.jsp</result>
+		</action>
+		<action name="addCart" class="cartAction" method="addCart">
+			<result name="success" type="chain">createCart</result>
+		</action>
+		<action name="updateCart" class="cartAction" method="updateCart">
+			<result name="success" type="chain">getAllCart</result>
+		</action>
+		<action name="deleteCart" class="cartAction" method="deleteCart">
+			<result name="success" type="chain">getAllCart</result>
+			<result name="fail" type="chain">getAllCart</result>
+		</action>
+		<action name="getAllCart" class="cartAction" method="getAllCart">
+			<result name="success">/listcart.jsp</result>
+		</action>
+		<action name="getCartById" class="cartAction" method="getCartById">
+			<result name="success">/editcart.jsp</result>
+		</action>
+		<action name="queryCartByCond" class="cartAction" method="queryCartByCond">
+			<result name="success">/querycart.jsp</result>
+		</action>
+	</package>
+</struts>

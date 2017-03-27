@@ -1,0 +1,1 @@
+function check(){if(document.myform.ordercode.value==''){alert('请输入订单号'); return false; }if(document.myform.linesid.value==''){alert('请输入线路'); return false; }if(document.myform.num.value==''){alert('请输入人数'); return false; }if(document.myform.price.value==''){alert('请输入单价'); return false; }}

@@ -1,0 +1,1 @@
+function check(){if(document.myform.name.value==''){alert('请输入景点名称'); return false; }if(document.myform.image.value==''){alert('请输入景点图片'); return false; }if(document.myform.intro.value==''){alert('请输入景点介绍'); return false; }if(document.myform.hits.value==''){alert('请输入点击数'); return false; }}

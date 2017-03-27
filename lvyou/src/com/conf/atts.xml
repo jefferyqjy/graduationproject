@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE struts PUBLIC 
+"-//Apache Software Foundation//DTD Struts Configuration 2.1//EN" 
+"http://struts.apache.org/dtds/struts-2.1.dtd">
+<struts>
+	<package name="atts" namespace="/atts" extends="default">
+		<action name="createAtts" class="attsAction" method="createAtts">
+			<result name="success">/admin/addatts.jsp</result>
+		</action>
+		<action name="addAtts" class="attsAction" method="addAtts">
+			<result name="success" type="chain">createAtts</result>
+		</action>
+		<action name="updateAtts" class="attsAction" method="updateAtts">
+			<result name="success" type="chain">getAllAtts</result>
+		</action>
+		<action name="deleteAtts" class="attsAction" method="deleteAtts">
+			<result name="success" type="chain">getAllAtts</result>
+			<result name="fail" type="chain">getAllAtts</result>
+		</action>
+		<action name="getAllAtts" class="attsAction" method="getAllAtts">
+			<result name="success">/admin/listatts.jsp</result>
+		</action>
+		<action name="getAttsById" class="attsAction" method="getAttsById">
+			<result name="success">/admin/editatts.jsp</result>
+		</action>
+		<action name="queryAttsByCond" class="attsAction" method="queryAttsByCond">
+			<result name="success">/admin/queryatts.jsp</result>
+		</action>
+	</package>
+</struts>

@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" 
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+	<class name="com.entity.LinesEntity" table="lines" catalog="lvyou">
+		<id name="linesid" type="java.lang.String">
+			<column name="linesid" length="255" />
+			<generator class="uuid.hex"></generator>
+		</id>
+		<property name="linename" type="java.lang.String">
+			<column name="linename" />
+		</property>
+		<property name="cateid" type="java.lang.String">
+			<column name="cateid" />
+		</property>
+		<property name="image" type="java.lang.String">
+			<column name="image" />
+		</property>
+		<property name="price" type="java.lang.String">
+			<column name="price" />
+		</property>
+		<property name="recommend" type="java.lang.String">
+			<column name="recommend" />
+		</property>
+		<property name="special" type="java.lang.String">
+			<column name="special" />
+		</property>
+		<property name="intro" type="java.lang.String">
+			<column name="intro" />
+		</property>
+		<many-to-one name="cate" column="cateid" class="com.entity.CateEntity"
+			fetch="join" insert="false" update="false" lazy="false" />
+	</class>
+</hibernate-mapping>

@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE struts PUBLIC 
+"-//Apache Software Foundation//DTD Struts Configuration 2.1//EN" 
+"http://struts.apache.org/dtds/struts-2.1.dtd">
+<struts>
+	<package name="retopic" namespace="/retopic" extends="default">
+		<action name="createRetopic" class="retopicAction" method="createRetopic">
+			<result name="success">/admin/addretopic.jsp</result>
+		</action>
+		<action name="addRetopic" class="retopicAction" method="addRetopic">
+			<result type="redirect">/topic/getAllTopic.action
+			</result>
+		</action>
+		<action name="updateRetopic" class="retopicAction" method="updateRetopic">
+			<result name="success" type="chain">getAllRetopic</result>
+		</action>
+		<action name="deleteRetopic" class="retopicAction" method="deleteRetopic">
+			<result name="success" type="chain">getAllRetopic</result>
+			<result name="fail" type="chain">getAllRetopic</result>
+		</action>
+		<action name="getAllRetopic" class="retopicAction" method="getAllRetopic">
+			<result name="success">/admin/listretopic.jsp</result>
+		</action>
+		<action name="getRetopicById" class="retopicAction" method="getRetopicById">
+			<result name="success">/admin/editretopic.jsp</result>
+		</action>
+		<action name="queryRetopicByCond" class="retopicAction" method="queryRetopicByCond">
+			<result name="success">/admin/queryretopic.jsp</result>
+		</action>
+	</package>
+</struts>

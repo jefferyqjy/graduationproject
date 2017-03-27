@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE struts PUBLIC 
+"-//Apache Software Foundation//DTD Struts Configuration 2.1//EN" 
+"http://struts.apache.org/dtds/struts-2.1.dtd">
+<struts>
+	<package name="orderdetail" namespace="/orderdetail" extends="default">
+		<action name="createOrderdetail" class="orderdetailAction"
+			method="createOrderdetail">
+			<result name="success">/admin/addorderdetail.jsp</result>
+		</action>
+		<action name="addOrderdetail" class="orderdetailAction" method="addOrderdetail">
+			<result name="success" type="chain">createOrderdetail</result>
+		</action>
+		<action name="updateOrderdetail" class="orderdetailAction"
+			method="updateOrderdetail">
+			<result name="success" type="chain">getAllOrderdetail</result>
+		</action>
+		<action name="deleteOrderdetail" class="orderdetailAction"
+			method="deleteOrderdetail">
+			<result name="success" type="chain">getAllOrderdetail</result>
+			<result name="fail" type="chain">getAllOrderdetail</result>
+		</action>
+		<action name="getAllOrderdetail" class="orderdetailAction"
+			method="getAllOrderdetail">
+			<result name="success">/admin/listorderdetail.jsp</result>
+		</action>
+		<action name="getOrderdetailById" class="orderdetailAction"
+			method="getOrderdetailById">
+			<result name="success">/admin/editorderdetail.jsp</result>
+		</action>
+		<action name="queryOrderdetailByCond" class="orderdetailAction"
+			method="queryOrderdetailByCond">
+			<result name="success">/admin/queryorderdetail.jsp</result>
+		</action>
+	</package>
+</struts>

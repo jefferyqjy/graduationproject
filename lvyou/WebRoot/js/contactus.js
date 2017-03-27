@@ -1,0 +1,1 @@
+function check(){if(document.myform.contents.value==''){alert('请输入内容'); return false; }}

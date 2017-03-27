@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE struts PUBLIC 
+"-//Apache Software Foundation//DTD Struts Configuration 2.1//EN" 
+"http://struts.apache.org/dtds/struts-2.1.dtd">
+<struts>
+	<package name="lines" namespace="/lines" extends="default">
+		<action name="createLines" class="linesAction" method="createLines">
+			<result name="success">/admin/addlines.jsp</result>
+		</action>
+		<action name="addLines" class="linesAction" method="addLines">
+			<result name="success" type="chain">createLines</result>
+		</action>
+		<action name="updateLines" class="linesAction" method="updateLines">
+			<result name="success" type="chain">getAllLines</result>
+		</action>
+		<action name="deleteLines" class="linesAction" method="deleteLines">
+			<result name="success" type="chain">getAllLines</result>
+			<result name="fail" type="chain">getAllLines</result>
+		</action>
+		<action name="getAllLines" class="linesAction" method="getAllLines">
+			<result name="success">/admin/listlines.jsp</result>
+		</action>
+		<action name="getLinesById" class="linesAction" method="getLinesById">
+			<result name="success">/admin/editlines.jsp</result>
+		</action>
+		<action name="queryLinesByCond" class="linesAction" method="queryLinesByCond">
+			<result name="success">/admin/querylines.jsp</result>
+		</action>
+	</package>
+</struts>

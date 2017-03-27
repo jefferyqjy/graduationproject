@@ -1,0 +1,179 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:p="http://www.springframework.org/schema/p"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-3.0.xsd">
+	<bean id="dataSource" class="org.apache.commons.dbcp.BasicDataSource">
+		<property name="driverClassName" value="org.gjt.mm.mysql.Driver"/>
+		<property name="url" value="jdbc:mysql://localhost:3306/lvyou"></property>
+		<property name="username" value="root"></property>
+		<property name="password" value="root"></property>
+	</bean>
+
+	<bean id="sessionFactory"
+		class="org.springframework.orm.hibernate3.LocalSessionFactoryBean">
+		<property name="dataSource">
+			<ref bean="dataSource" />
+		</property>
+		<property name="hibernateProperties">
+			<props>
+				<prop key="hibernate.dialect">org.hibernate.dialect.MySQLDialect</prop>
+				<prop key="hibernate.show_sql">true</prop>
+				<prop key="hibernate.hbm2ddl.auto">update</prop>
+			</props>
+		</property>
+		<property name="mappingResources">
+			<list>
+				<value>com/entity/Users.hbm.xml</value>
+				<value>com/entity/Article.hbm.xml</value>
+				<value>com/entity/Contactus.hbm.xml</value>
+				<value>com/entity/Aboutus.hbm.xml</value>
+				<value>com/entity/Atts.hbm.xml</value>
+				<value>com/entity/Cate.hbm.xml</value>
+				<value>com/entity/Lines.hbm.xml</value>
+				<value>com/entity/Cart.hbm.xml</value>
+				<value>com/entity/Orders.hbm.xml</value>
+				<value>com/entity/Orderdetail.hbm.xml</value>
+				<value>com/entity/Topic.hbm.xml</value>
+				<value>com/entity/Retopic.hbm.xml</value>
+			</list>
+		</property>
+	</bean>
+	<bean id="usersDAO" name="usersDAO" class="com.dao.UsersDAO">
+		<property name="sessionFactory" ref="sessionFactory"></property>
+	</bean>
+	<bean id="usersBusiness" name="usersBusiness" class="com.business.UsersBusiness">
+		<property name="usersDAO" ref="usersDAO"></property>
+	</bean>
+	<bean id="usersAction" name="usersAction" class="com.action.UsersAction">
+		<property name="usersBusiness" ref="usersBusiness"></property>
+	</bean>
+
+	<bean id="articleDAO" name="articleDAO" class="com.dao.ArticleDAO">
+		<property name="sessionFactory" ref="sessionFactory"></property>
+	</bean>
+	<bean id="articleBusiness" name="articleBusiness" class="com.business.ArticleBusiness">
+		<property name="articleDAO" ref="articleDAO"></property>
+	</bean>
+	<bean id="articleAction" name="articleAction" class="com.action.ArticleAction">
+		<property name="articleBusiness" ref="articleBusiness"></property>
+	</bean>
+
+	<bean id="contactusDAO" name="contactusDAO" class="com.dao.ContactusDAO">
+		<property name="sessionFactory" ref="sessionFactory"></property>
+	</bean>
+	<bean id="contactusBusiness" name="contactusBusiness" class="com.business.ContactusBusiness">
+		<property name="contactusDAO" ref="contactusDAO"></property>
+	</bean>
+	<bean id="contactusAction" name="contactusAction" class="com.action.ContactusAction">
+		<property name="contactusBusiness" ref="contactusBusiness"></property>
+	</bean>
+
+	<bean id="aboutusDAO" name="aboutusDAO" class="com.dao.AboutusDAO">
+		<property name="sessionFactory" ref="sessionFactory"></property>
+	</bean>
+	<bean id="aboutusBusiness" name="aboutusBusiness" class="com.business.AboutusBusiness">
+		<property name="aboutusDAO" ref="aboutusDAO"></property>
+	</bean>
+	<bean id="aboutusAction" name="aboutusAction" class="com.action.AboutusAction">
+		<property name="aboutusBusiness" ref="aboutusBusiness"></property>
+	</bean>
+
+	<bean id="attsDAO" name="attsDAO" class="com.dao.AttsDAO">
+		<property name="sessionFactory" ref="sessionFactory"></property>
+	</bean>
+	<bean id="attsBusiness" name="attsBusiness" class="com.business.AttsBusiness">
+		<property name="attsDAO" ref="attsDAO"></property>
+	</bean>
+	<bean id="attsAction" name="attsAction" class="com.action.AttsAction">
+		<property name="attsBusiness" ref="attsBusiness"></property>
+	</bean>
+
+	<bean id="cateDAO" name="cateDAO" class="com.dao.CateDAO">
+		<property name="sessionFactory" ref="sessionFactory"></property>
+	</bean>
+	<bean id="cateBusiness" name="cateBusiness" class="com.business.CateBusiness">
+		<property name="cateDAO" ref="cateDAO"></property>
+	</bean>
+	<bean id="cateAction" name="cateAction" class="com.action.CateAction">
+		<property name="cateBusiness" ref="cateBusiness"></property>
+	</bean>
+
+	<bean id="linesDAO" name="linesDAO" class="com.dao.LinesDAO">
+		<property name="sessionFactory" ref="sessionFactory"></property>
+	</bean>
+	<bean id="linesBusiness" name="linesBusiness" class="com.business.LinesBusiness">
+		<property name="linesDAO" ref="linesDAO"></property>
+	</bean>
+	<bean id="linesAction" name="linesAction" class="com.action.LinesAction">
+		<property name="linesBusiness" ref="linesBusiness"></property>
+		<property name="cateBusiness" ref="cateBusiness"></property>
+	</bean>
+
+	<bean id="cartDAO" name="cartDAO" class="com.dao.CartDAO">
+		<property name="sessionFactory" ref="sessionFactory"></property>
+	</bean>
+	<bean id="cartBusiness" name="cartBusiness" class="com.business.CartBusiness">
+		<property name="cartDAO" ref="cartDAO"></property>
+	</bean>
+	<bean id="cartAction" name="cartAction" class="com.action.CartAction">
+		<property name="cartBusiness" ref="cartBusiness"></property>
+	</bean>
+
+	<bean id="ordersDAO" name="ordersDAO" class="com.dao.OrdersDAO">
+		<property name="sessionFactory" ref="sessionFactory"></property>
+	</bean>
+	<bean id="ordersBusiness" name="ordersBusiness" class="com.business.OrdersBusiness">
+		<property name="ordersDAO" ref="ordersDAO"></property>
+	</bean>
+	<bean id="ordersAction" name="ordersAction" class="com.action.OrdersAction">
+		<property name="ordersBusiness" ref="ordersBusiness"></property>
+	</bean>
+
+	<bean id="orderdetailDAO" name="orderdetailDAO" class="com.dao.OrderdetailDAO">
+		<property name="sessionFactory" ref="sessionFactory"></property>
+	</bean>
+	<bean id="orderdetailBusiness" name="orderdetailBusiness"
+		class="com.business.OrderdetailBusiness">
+		<property name="orderdetailDAO" ref="orderdetailDAO"></property>
+	</bean>
+	<bean id="orderdetailAction" name="orderdetailAction" class="com.action.OrderdetailAction">
+		<property name="orderdetailBusiness" ref="orderdetailBusiness"></property>
+	</bean>
+
+	<bean id="topicDAO" name="topicDAO" class="com.dao.TopicDAO">
+		<property name="sessionFactory" ref="sessionFactory"></property>
+	</bean>
+	<bean id="topicBusiness" name="topicBusiness" class="com.business.TopicBusiness">
+		<property name="topicDAO" ref="topicDAO"></property>
+	</bean>
+	<bean id="topicAction" name="topicAction" class="com.action.TopicAction">
+		<property name="topicBusiness" ref="topicBusiness"></property>
+	</bean>
+
+	<bean id="retopicDAO" name="retopicDAO" class="com.dao.RetopicDAO">
+		<property name="sessionFactory" ref="sessionFactory"></property>
+	</bean>
+	<bean id="retopicBusiness" name="retopicBusiness" class="com.business.RetopicBusiness">
+		<property name="retopicDAO" ref="retopicDAO"></property>
+	</bean>
+	<bean id="retopicAction" name="retopicAction" class="com.action.RetopicAction">
+		<property name="retopicBusiness" ref="retopicBusiness"></property>
+	</bean>
+	<bean id="uploadAction" name="uploadAction" class="com.action.UploadAction">
+	</bean>
+	<bean id="indexAction" name="indexAction" class="com.action.IndexAction">
+		<property name="retopicBusiness" ref="retopicBusiness"></property>
+		<property name="topicBusiness" ref="topicBusiness"></property>
+		<property name="orderdetailBusiness" ref="orderdetailBusiness"></property>
+		<property name="ordersBusiness" ref="ordersBusiness"></property>
+		<property name="cartBusiness" ref="cartBusiness"></property>
+		<property name="linesBusiness" ref="linesBusiness"></property>
+		<property name="cateBusiness" ref="cateBusiness"></property>
+		<property name="attsBusiness" ref="attsBusiness"></property>
+		<property name="aboutusBusiness" ref="aboutusBusiness"></property>
+		<property name="usersBusiness" ref="usersBusiness"></property>
+		<property name="contactusBusiness" ref="contactusBusiness"></property>
+		<property name="articleBusiness" ref="articleBusiness"></property>
+	</bean>
+
+</beans>

@@ -1,0 +1,1 @@
+function check(){if(document.myform.usersid.value==''){alert('请输入用户'); return false; }if(document.myform.linesid.value==''){alert('请输入线路'); return false; }if(document.myform.num.value==''){alert('请输入人数'); return false; }if(document.myform.price.value==''){alert('请输入单价'); return false; }if(document.myform.addtime.value==''){alert('请输入日期'); return false; }}

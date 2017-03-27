@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE struts PUBLIC 
+"-//Apache Software Foundation//DTD Struts Configuration 2.1//EN" 
+"http://struts.apache.org/dtds/struts-2.1.dtd">
+<struts>
+	<package name="aboutus" namespace="/aboutus" extends="default">
+		<action name="createAboutus" class="aboutusAction" method="createAboutus">
+			<result name="success">/admin/addaboutus.jsp</result>
+		</action>
+		<action name="addAboutus" class="aboutusAction" method="addAboutus">
+			<result name="success" type="chain">createAboutus</result>
+		</action>
+		<action name="updateAboutus" class="aboutusAction" method="updateAboutus">
+			<result name="success" type="chain">getAllAboutus</result>
+		</action>
+		<action name="deleteAboutus" class="aboutusAction" method="deleteAboutus">
+			<result name="success" type="chain">getAllAboutus</result>
+			<result name="fail" type="chain">getAllAboutus</result>
+		</action>
+		<action name="getAllAboutus" class="aboutusAction" method="getAllAboutus">
+			<result name="success">/admin/listaboutus.jsp</result>
+		</action>
+		<action name="getAboutusById" class="aboutusAction" method="getAboutusById">
+			<result name="success">/admin/editaboutus.jsp</result>
+		</action>
+		<action name="queryAboutusByCond" class="aboutusAction" method="queryAboutusByCond">
+			<result name="success">/admin/queryaboutus.jsp</result>
+		</action>
+	</package>
+</struts>

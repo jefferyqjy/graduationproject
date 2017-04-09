@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts-config PUBLIC "-//Apache Software Foundation//DTD Struts Configuration 1.1//EN" "http://jakarta.apache.org/struts/dtds/struts-config_1_1.dtd">
+
+<struts-config>
+  <data-sources />
+  <form-beans />
+  <global-exceptions />
+  <global-forwards />
+  <action-mappings >
+    <action path="/admin" type="com.device.struts.action.AdminAction" />
+    <action path="/com" type="com.device.struts.action.ComAction" />
+    
+    <action path="/login" type="com.device.struts.action.LoginAction" />
+
+  </action-mappings>
+
+  <message-resources parameter="com.device.struts.ApplicationResources" />
+</struts-config>
+

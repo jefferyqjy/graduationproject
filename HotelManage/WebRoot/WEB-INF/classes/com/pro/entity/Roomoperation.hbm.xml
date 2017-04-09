@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+    <class name="com.pro.entity.Roomoperation" table="t_roomoperation">
+        <id name="id" type="java.lang.Integer">
+            <column name="id"/>
+            <generator class="native"/>
+        </id>
+        <property access="field" column="t_roomgenid" length="200" name="roomgenid"/>
+        <property access="field" column="t_roomid" length="200" name="roomid"/>
+        <property access="field" column="t_custgenid" length="200" name="custgenid"/>
+        <property access="field" column="t_custid" length="200" name="custid"/>
+        <property access="field" column="t_identityid" length="200" name="identityid"/>
+        <property access="field" column="t_remarks" length="200" name="remarks"/>
+        <property access="field" column="t_begintime" length="200" name="begintime"/>
+        <property access="field" column="t_endtime" length="200" name="endtime"/>
+    </class>
+</hibernate-mapping>

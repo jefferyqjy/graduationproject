@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+    <class name="com.pro.entity.Roominfo" table="t_roominfo">
+        <id name="id" type="java.lang.Integer">
+            <column name="id"/>
+            <generator class="native"/>
+        </id>
+        <property access="field" column="t_roomid" length="200" name="roomid"/>
+        <property access="field" column="t_roomtype" length="200" name="roomtype"/>
+        <property access="field" column="t_roomposition" length="200" name="roomposition"/>
+        <property access="field" column="t_roomdesc" length="200" name="roomdesc"/>
+        <property access="field" column="t_status" length="200" name="status"/>
+        <property access="field" column="t_price" length="200" name="price"/>
+        <property access="field" column="t_tv" length="200" name="tv"/>
+        <property access="field" column="t_airconition" length="200" name="airconition"/>
+        <property access="field" column="t_bednum" length="200" name="bednum"/>
+        <property access="field" column="t_remark" length="2000" name="remark"/>
+        <property access="field" column="t_flag" length="200" name="flag"/>
+        
+    </class>
+</hibernate-mapping>

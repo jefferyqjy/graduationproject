@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+    <class name="com.pro.entity.Customerinfo" table="t_customerinfo">
+        <id name="id" type="java.lang.Integer">
+            <column name="id"/>
+            <generator class="native"/>
+        </id>
+        <property access="field" column="t_identityid" length="200" name="identityid"/>
+        <property access="field" column="t_custname" length="200" name="custname"/>
+        <property access="field" column="t_sex" length="200" name="sex"/>
+        <property access="field" column="t_phone" length="200" name="phone"/>
+        <property access="field" column="t_roomgenid" length="200" name="roomgenid"/>
+        <property access="field" column="t_roomid" length="200" name="roomid"/>
+    </class>
+</hibernate-mapping>

@@ -14,9 +14,18 @@
 		<title>美丽的西双版纳旅行平台</title>
 		<link href="themes/ecmoban_mbaobao/style.css" rel="stylesheet"
 			type="text/css" />
-		<script type="text/javascript" src="js/index.js"></script>
 		<script type="text/javascript" src="js/date.js"></script>
-		<script type="text/javascript" src="js/tourismusers.js"></script>
+		
+		<link href="css/validationEngine.jquery.css" rel="stylesheet"
+			type="text/css" />
+		<script type="text/javascript" src="js/jquery-3.2.0.min.js"></script>
+		<script type="text/javascript" src="js/jquery.validationEngine.js"></script>
+		<script type="text/javascript" src="js/jquery.validationEngine-zh_CN.js"></script>
+		<script type="text/javascript">
+			$(function() {
+				$("#myForm").validationEngine();
+			})
+		</script>
 	</head>
 
 	<body class="index_body">
@@ -46,7 +55,7 @@
 			<div class="usBox">
 				<div class="usBox_2 clearfix">
 					<div class="logtitle3"></div>
-					<form action="index/reg.action" method="post" name="myform"
+					<form action="index/reg.action" method="post" name="myform" id="myForm"
 						onsubmit="return check();">
 						<table width="100%" border="0" align="left" cellpadding="5"
 							cellspacing="3">
@@ -55,7 +64,7 @@
 									用户名
 								</td>
 								<td width="87%">
-									<input type="text" name="users.username" class="inputBg"
+									<input type="text" name="users.username" id="users.username" class="inputBg validate[required]"
 										size="25" id="username" />
 									<span id="username_notice" style="color: #FF0000"> *</span>
 								</td>
@@ -65,7 +74,7 @@
 									密码
 								</td>
 								<td>
-									<input type="password" name="users.password" class="inputBg"
+									<input type="password" name="users.password" id="password" class="inputBg validate[required]"
 										size="25" id="password" />
 									<span style="color: #FF0000" id="password_notice"> *</span>
 								</td>
@@ -76,7 +85,7 @@
 								</td>
 								<td>
 									<input name="repassword" type="password" id="rpassword"
-										class="inputBg" size="25" />
+										class="inputBg validate[required,equals[password]]" size="25" />
 									<span style="color: #FF0000" id="conform_password_notice">
 										*</span>
 								</td>
@@ -86,7 +95,7 @@
 									姓名
 								</td>
 								<td>
-									<input type="text" name="users.realname" class="inputBg"
+									<input type="text" name="users.realname" id="users.realname" class="inputBg validate[required]"
 										size="25" id="realname" />
 									<span style="color: #FF0000"> *</span>
 								</td>
@@ -100,7 +109,6 @@
 									女 &nbsp;&nbsp;&nbsp;&nbsp;
 									<input type="radio" name="users.sex" value="男" id="sex" />
 									男
-									<span style="color: #FF0000"> *</span>
 								</td>
 							</tr>
 							<tr>
@@ -111,7 +119,6 @@
 									<input type="text" name="users.birthday" class="inputBg"
 										readonly="readonly" onclick="setDay(this)" size="25"
 										id="birthday" />
-									<span style="color: #FF0000"> *</span>
 								</td>
 							</tr>
 							<tr>
@@ -119,9 +126,8 @@
 									联系方式
 								</td>
 								<td>
-									<input type="text" name="users.contact" class="inputBg"
+									<input type="text" name="users.contact" class="inputBg validate[minSize[11],maxSize[11]]"
 										size="25" id="contact" />
-									<span style="color: #FF0000"> *</span>
 								</td>
 							</tr>
 							<tr>
@@ -131,7 +137,6 @@
 								<td>
 									<input type="text" name="users.address" class="inputBg"
 										size="25" id="address" />
-									<span style="color: #FF0000"> *</span>
 								</td>
 							</tr>
 							<tr>

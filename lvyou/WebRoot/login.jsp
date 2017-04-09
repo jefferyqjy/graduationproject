@@ -15,6 +15,17 @@
 		<link href="themes/ecmoban_mbaobao/style.css" rel="stylesheet"
 			type="text/css" />
 		<script type="text/javascript" src="js/index.js"></script>
+		
+		<link href="css/validationEngine.jquery.css" rel="stylesheet"
+			type="text/css" />
+		<script type="text/javascript" src="js/jquery-3.2.0.min.js"></script>
+		<script type="text/javascript" src="js/jquery.validationEngine.js"></script>
+		<script type="text/javascript" src="js/jquery.validationEngine-zh_CN.js"></script>
+		<script type="text/javascript">
+			$(function() {
+				$("#formLogin").validationEngine();
+			})
+		</script>
 	</head>
 
 	<body class="index_body">
@@ -43,7 +54,7 @@
 			<div class="usBox clearfix">
 				<div class="usBox_1 f_l">
 					<div class="logtitle"></div>
-					<form name="formLogin" action="index/login.action" method="post">
+					<form name="formLogin" id="formLogin" action="index/login.action" method="post">
 						<table width="100%" border="0" align="left" cellpadding="3"
 							cellspacing="5">
 							<tr>
@@ -51,7 +62,7 @@
 									用户名
 								</td>
 								<td width="85%">
-									<input name="users.username" type="text" size="25" class="inputBg" />
+									<input name="users.username" id="username" type="text" size="25" class="inputBg validate[required]" />
 								</td>
 							</tr>
 							<tr>
@@ -59,13 +70,33 @@
 									密码
 								</td>
 								<td>
-									<input name="users.password" type="password" size="25"
-										class="inputBg" />
+									<input name="users.password" id="password" type="password" size="25"
+										class="inputBg validate[required]" />
+								</td>
+							</tr>
+							<tr>
+								<td></td>
+								<td>
+									<div class="usernameformError parentFormformLogin formError" 
+										style="opacity: 0.87; position: absolute; top: 316px; left: 719.5px; margin-top: -38px;">
+										<div class="formErrorContent">* ${msg }<br></div>
+										<div class="formErrorArrow">
+											<div class="line10"><!-- --></div>
+											<div class="line9"><!-- --></div>
+											<div class="line8"><!-- --></div>
+											<div class="line7"><!-- --></div>
+											<div class="line6"><!-- --></div>
+											<div class="line5"><!-- --></div>
+											<div class="line4"><!-- --></div>
+											<div class="line3"><!-- --></div>
+											<div class="line2"><!-- --></div>
+											<div class="line1"><!-- --></div>
+										</div>
+									</div>
 								</td>
 							</tr>
 							<tr>
 								<td>
-									&nbsp;${msg }
 								</td>
 								<td align="left">
 									<input type="submit" value="" class="us_Submit" />

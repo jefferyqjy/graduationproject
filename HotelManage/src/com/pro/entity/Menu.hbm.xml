@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+    <class name="com.pro.entity.Menu" table="t_menu">
+        <id name="id" type="java.lang.Integer">
+            <column name="id"/>
+            <generator class="increment"/>
+        </id>
+        <property access="field" column="t_name" length="50" name="name"/>
+        <property access="field" column="t_price" length="200" name="price"/>
+        <property access="field" column="t_type" length="10" name="type"/>
+        <property access="field" column="t_unit" length="4" name="unit"/>
+    </class>
+</hibernate-mapping>

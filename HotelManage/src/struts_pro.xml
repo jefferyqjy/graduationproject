@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts PUBLIC "-//Apache Software Foundation//DTD Struts Configuration 2.0//EN"
+                        "http://struts.apache.org/dtds/struts-2.0.dtd">
+<struts>
+    <!-- 默认的视图主题 -->
+    <constant name="struts.ui.theme" value="simple"/>
+    <constant name="struts.objectFactory" value="spring"/>
+    <constant name="struts.i18n.encoding" value="utf-8"/>
+    <constant name="struts.action.extension" value="do"/>
+    <constant name="struts.devMode" value="true"/>
+    <constant name="struts.configuration.xml.reload" value="true"/>
+    <package extends="struts-default" name="customerinfo" namespace="/customerinfo">
+        <action class="customerinfoAction" method="{1}" name="customerinfo_*">
+            <result name="success">/sys_jsp/success.jsp</result>
+            <result name="error">/sys_jsp/error.jsp</result>
+            <result name="query">/pro_jsp/customerinfo/customerinfo_{1}.jsp</result>
+            <result name="close">/sys_jsp/selfClose.jsp</result>
+            <result name="successClose">/sys_jsp/success4Close.jsp</result>
+            <result name="errorClose">/sys_jsp/error4Close.jsp</result>
+        </action>
+    </package>
+    <package extends="struts-default" name="history" namespace="/history">
+        <action class="historyAction" method="{1}" name="history_*">
+            <result name="success">/sys_jsp/success.jsp</result>
+            <result name="error">/sys_jsp/error.jsp</result>
+            <result name="query">/pro_jsp/history/history_{1}.jsp</result>
+            <result name="close">/sys_jsp/selfClose.jsp</result>
+            <result name="successClose">/sys_jsp/success4Close.jsp</result>
+            <result name="errorClose">/sys_jsp/error4Close.jsp</result>
+        </action>
+    </package>
+    <package extends="struts-default" name="messages" namespace="/messages">
+        <action class="messagesAction" method="{1}" name="messages_*">
+            <result name="success">/sys_jsp/success.jsp</result>
+            <result name="error">/sys_jsp/error.jsp</result>
+            <result name="query">/pro_jsp/messages/messages_{1}.jsp</result>
+            <result name="close">/sys_jsp/selfClose.jsp</result>
+            <result name="successClose">/sys_jsp/success4Close.jsp</result>
+            <result name="errorClose">/sys_jsp/error4Close.jsp</result>
+        </action>
+    </package>
+    <package extends="struts-default" name="roominfo" namespace="/roominfo">
+        <action class="roominfoAction" method="{1}" name="roominfo_*">
+            <result name="success">/sys_jsp/success.jsp</result>
+            <result name="error">/sys_jsp/error.jsp</result>
+            <result name="query">/pro_jsp/roominfo/roominfo_{1}.jsp</result>
+            <result name="close">/sys_jsp/selfClose.jsp</result>
+            <result name="successClose">/sys_jsp/success4Close.jsp</result>
+            <result name="errorClose">/sys_jsp/error4Close.jsp</result>
+        </action>
+    </package>
+    <package extends="struts-default" name="roomoperation" namespace="/roomoperation">
+        <action class="roomoperationAction" method="{1}" name="roomoperation_*">
+            <result name="success">/sys_jsp/success.jsp</result>
+            <result name="error">/sys_jsp/error.jsp</result>
+            <result name="query">/pro_jsp/roomoperation/roomoperation_{1}.jsp</result>
+             <result name="ruzhu">/pro_jsp/roomoperation/roomoperation_ruzhu.jsp</result>
+              <result name="ruzhu2">/pro_jsp/roomoperation/roomoperation_ruzhu2.jsp</result>
+             <result name="freeroomlist">/pro_jsp/roomoperation/roominfo_freeroomlist.jsp</result>
+             <result name="freeroomlist2">/pro_jsp/roomoperation/roominfo_freeroomlist2.jsp</result>
+             <result name="gototuisu">/pro_jsp/roomoperation/roomoperation_tuisu.jsp</result>
+             
+             <result name="tiaofang">/pro_jsp/roomoperation/roomoperation_tiaofang.jsp</result>
+             
+            <result name="close">/sys_jsp/selfClose.jsp</result>
+            <result name="successClose">/sys_jsp/success4Close.jsp</result>
+            <result name="errorClose">/sys_jsp/error4Close.jsp</result>
+        </action>
+    </package>
+    
+     <package extends="struts-default" name="appoint" namespace="/appoint">
+        <action class="appointAction" method="{1}" name="appoint_*">
+            <result name="success">/sys_jsp/success.jsp</result>
+            <result name="error">/sys_jsp/error.jsp</result>
+            <result name="query">/pro_jsp/appoint/appoint_{1}.jsp</result>
+            <result name="close">/sys_jsp/selfClose.jsp</result>
+            <result name="successClose">/sys_jsp/success4Close.jsp</result>
+            <result name="errorClose">/sys_jsp/error4Close.jsp</result>
+        </action>
+    </package>
+    
+    <package extends="struts-default" name="menu" namespace="/menu">
+        <action class="menuAction" method="{1}" name="menu_*">
+            <result name="success">/sys_jsp/success.jsp</result>
+            <result name="error">/sys_jsp/error.jsp</result>
+            <result name="query">/pro_jsp/menuinfo/menuinfo_{1}.jsp</result>
+            <result name="close">/sys_jsp/selfClose.jsp</result>
+            <result name="successClose">/sys_jsp/success4Close.jsp</result>
+            <result name="errorClose">/sys_jsp/error4Close.jsp</result>
+        </action>
+    </package>
+    
+    <package extends="struts-default" name="foodappoint" namespace="/foodappoint">
+        <action class="foodappointAction" method="{1}" name="foodappoint_*">
+            <result name="success">/sys_jsp/success.jsp</result>
+            <result name="error">/sys_jsp/error.jsp</result>
+            <result name="query">/pro_jsp/foodappoint/foodappoint_{1}.jsp</result>
+            <result name="close">/sys_jsp/selfClose.jsp</result>
+            <result name="successClose">/sys_jsp/success4Close.jsp</result>
+            <result name="errorClose">/sys_jsp/error4Close.jsp</result>
+        </action>
+    </package>
+</struts>
